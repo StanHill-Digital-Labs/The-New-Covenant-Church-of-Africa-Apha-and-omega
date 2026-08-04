@@ -24,7 +24,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModa
   };
 
   return (
-    <main className="pt-20">
+    <main className="pt-16 md:pt-8">
       {/* Hero Section */}
       <section className="relative min-h-[819px] flex items-center justify-center overflow-hidden bg-[#f0eee8]">
         <div className="absolute inset-0 z-0">

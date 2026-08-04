@@ -47,7 +47,8 @@ export const Header: React.FC<HeaderProps> = ({
           className="font-headline-md text-[18px] md:text-[22px] text-[#475749] font-bold truncate max-w-[240px] sm:max-w-[360px] md:max-w-[480px] leading-snug hover:opacity-90 transition-opacity"
           title={CHURCH_INFO.fullName}
         >
-          {CHURCH_INFO.fullName}
+          {/*{CHURCH_INFO.fullName} */}
+          LOGO
         </Link>
 
         {/* Desktop Navigation Links */}
