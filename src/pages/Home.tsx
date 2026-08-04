@@ -37,7 +37,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModa
         </div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center space-y-8 py-20">
-          <h1 className="font-headline-xl text-sm sm:text-[52px] md:text-[64px] text-[#475749] max-w-4xl mx-auto leading-tight font-bold">
+          <h1 className="font-headline-xl text-[32px] sm:text-[52px] md:text-[64px] text-[#475749] max-w-4xl mx-auto leading-tight font-bold">
             Welcome to {CHURCH_INFO.fullName}
           </h1>
           <p className="font-body-lg text-[18px] md:text-[22px] text-[#434843] max-w-2xl mx-auto font-normal">

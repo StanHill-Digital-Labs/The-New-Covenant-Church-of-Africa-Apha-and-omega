@@ -121,12 +121,12 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Mobile Menu Button & Quick Support */}
         <div className="flex items-center gap-2 md:hidden">
-          <button
+          {/*<button
             onClick={onOpenSupportModal}
             className="bg-[#475749] text-white px-3 py-1.5 rounded-full text-xs font-semibold cursor-pointer whitespace-nowrap"
           >
             Support
-          </button>
+          </button> */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-[#475749] p-2 rounded-md hover:bg-[#e5e2dc]/50 transition-colors cursor-pointer"
