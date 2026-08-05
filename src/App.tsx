@@ -13,6 +13,7 @@ import { PrivacyModal } from './components/PrivacyModal';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Sermons } from './pages/Sermons';
+import { NotFound } from './pages/NotFound';
 
 import { Sermon, Lesson } from './types';
 
@@ -78,10 +79,7 @@ export default function App() {
             <Route
               path="*"
               element={
-                <Home
-                  onOpenSupportModal={() => setSupportModalOpen(true)}
-                  onOpenPrayerModal={() => setPrayerModalOpen(true)}
-                />
+                <NotFound />
               }
             />
           </Routes>
