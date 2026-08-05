@@ -8,6 +8,7 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModal }) => {
   const [contactName, setContactName] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
   const [contactMsg, setContactMsg] = useState('');
   const [submittedMessage, setSubmittedMessage] = useState(false);
 
@@ -208,6 +209,21 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModa
                     className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#546251] focus:outline-none transition-colors text-sm"
                   />
                 </div>
+                
+                <div>
+		  <label className="block font-label-sm text-sm text-[#1c1c18] mb-2 font-bold" htmlFor="email">
+		    Email
+		  </label>
+		  <input
+		    id="email"
+		    type="email"
+		    required
+		    placeholder="you@example.com"
+		    value={contactEmail}
+		    onChange={(e) => setContactEmail(e.target.value)}
+		    className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#546251] focus:outline-none transition-colors text-sm"
+		  />
+		</div>
 
                 <div>
                   <label className="block font-label-sm text-sm text-[#1c1c18] mb-2 font-bold" htmlFor="message">
