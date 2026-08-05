@@ -14,7 +14,7 @@ const [submittedMessage, setSubmittedMessage] = useState(false);
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitError, setSubmitError] = useState('');
 
-const WEB3FORMS_ACCESS_KEY = "f2fabff9-dcea-477c-9240-ce87f1538748";
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
 const handleContactSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
