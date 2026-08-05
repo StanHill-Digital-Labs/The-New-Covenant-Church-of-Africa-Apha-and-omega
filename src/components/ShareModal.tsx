@@ -12,7 +12,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  const currentUrl = window.location.origin;
+  const sermonsUrl = `${window.location.origin}/sermons`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(currentUrl);
@@ -42,7 +42,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
         {/* Generated SVG QR Code representation */}
         <div className="bg-white p-4 rounded-xl border border-[#c3c8c1] inline-block mb-4 shadow-sm">
   <QRCodeSVG
-    value={currentUrl}
+    value={sermonsUrl}
     size={160}
     bgColor="#ffffff"
     fgColor="#475749"
