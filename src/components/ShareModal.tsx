@@ -21,7 +21,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-fadeIn">
-      <div className="relative w-full max-w-md bg-[#fcf9f3] rounded-2xl shadow-2xl border border-[#c3c8c1] p-6 text-center">
+      <div className="relative w-full max-w-md max-h-[90vh] md:max-h-[95vh]  bg-[#fcf9f3] rounded-2xl shadow-2xl border border-[#c3c8c1] p-6 text-center overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-[#747872] hover:text-[#1c1c18] p-2 rounded-full hover:bg-[#e5e2dc] transition-colors cursor-pointer"
