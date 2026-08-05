@@ -11,6 +11,7 @@ export const CHURCH_INFO = {
   copyrightYear: 2024,
   motto: 'Transforming lives and society through prophecy and spiritual nurturing.'
 };
+export const FOUNDING_YEAR = 2018;
 
 export const IMAGES = {
   heroBg: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtYE98OENi4N2IDppn5V-NBeE-ZO-qD7a4Liv1bwgJVwyOoa9jpr8k08y0XVCu1AnyGXNrcKP2tXVfs_2y3anYgBtRo6xdTCtVQRBASylfIvYwtpSl1y2xnf-lFg9TKpIAcfq5B2fg6kJPDjQXelgPzN4rzkrsW1VJ4HNThWvmTj30oK5QQ03nbDW2A-vkAJqit9CZeFLZI5ccg0gd7qjaWx7bqAOZB8B-RdW36zlO8pGKH3Ajr5PE',

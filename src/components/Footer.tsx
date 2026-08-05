@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CHURCH_INFO } from '../data/churchData';
+import { CHURCH_INFO, FOUNDING_YEAR } from '../data/churchData';
 
 interface FooterProps {
   onOpenBranchesModal?: () => void;
@@ -19,8 +19,8 @@ export const Footer: React.FC<FooterProps> = ({
           <p className="font-headline-md text-[20px] text-[#546251] font-bold leading-tight">
             {CHURCH_INFO.fullName}
           </p>
-          <p className="font-body-md text-[14px] text-[#434843]">
-            © {CHURCH_INFO.copyrightYear} {CHURCH_INFO.fullName}. All rights reserved.
+          <p className="font-body-md text-[12pt] text-[#434843]">
+            © {FOUNDING_YEAR}–{new Date().getFullYear()} {CHURCH_INFO.fullName}. All rights reserved.
           </p>
         </div>
 
