@@ -184,7 +184,7 @@ export const Footer: React.FC<FooterProps> = ({
 	    href="https://stanhilllabs.com"
 	    target="_blank"
 	    rel="noopener noreferrer"
-	    className="inline-block animate-heartbeat hover:scale-110 transition-transform duration-300"
+	    className="inline-block animate-heartbeat hover:scale-120 transition-transform duration-300"
 	    aria-label="StanHill Labs"
 	  >
 	    ❤️

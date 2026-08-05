@@ -194,7 +194,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
                 We welcome your inquiries, prayer requests, and messages. Reach out to our church office.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div className="flex items-start gap-4">
                   <span className="material-symbols-outlined text-[#546251] mt-1 text-2xl">call</span>
                   <div>
@@ -217,7 +217,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
               </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-">
               <button
                 onClick={onOpenPrayerModal}
                 className="text-xs text-[#121f11] font-bold underline hover:text-[#546251] cursor-pointer"
@@ -230,7 +230,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
           {/* Contact Form */}
           <div className="p-8 sm:p-12 md:w-3/5 bg-[#fcf9f3]">
             {!submittedMessage ? (
-              <form onSubmit={handleContactSubmit} className="space-y-6">
+              <form onSubmit={handleContactSubmit} className="space-y-2 md:space-y-4">
               <input
                 type="checkbox"
                 name="botcheck"
@@ -281,7 +281,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
                     placeholder="How can we help you?"
                     value={contactMsg}
                     onChange={(e) => setContactMsg(e.target.value)}
-                    className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#546251] focus:outline-none transition-colors text-sm"
+                    className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#546251] focus:outline-none transition-colors text-sm resize-none max-h-32"
                   ></textarea>
                 </div>
                                 
