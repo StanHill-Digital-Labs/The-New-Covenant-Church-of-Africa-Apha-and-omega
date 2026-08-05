@@ -7,15 +7,51 @@ interface HomeProps {
 }
 
 export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModal }) => {
-  const [contactName, setContactName] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
-  const [contactMsg, setContactMsg] = useState('');
-  const [submittedMessage, setSubmittedMessage] = useState(false);
+ const [contactName, setContactName] = useState('');
+const [contactEmail, setContactEmail] = useState('');
+const [contactMsg, setContactMsg] = useState('');
+const [submittedMessage, setSubmittedMessage] = useState(false);
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitError, setSubmitError] = useState('');
 
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmittedMessage(true);
-  };
+const WEB3FORMS_ACCESS_KEY = "f2fabff9-dcea-477c-9240-ce87f1538748";
+
+const handleContactSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitError('');
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        botcheck: "",
+        name: contactName,
+        email: contactEmail,
+        message: contactMsg,
+        subject: `New message from ${contactName} via church website`,
+        from_name: "Church Website Contact Form", // shows as the sender name in your inbox
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setSubmittedMessage(true);
+    } else {
+      setSubmitError(data.message || "Something went wrong. Please try again.");
+    }
+  } catch (err) {
+    setSubmitError("Network error — please check your connection and try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const scrollToContact = () => {
     const el = document.getElementById('contact-section');
@@ -239,12 +275,19 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModa
                     className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#546251] focus:outline-none transition-colors text-sm"
                   ></textarea>
                 </div>
+                
+                <input type="checkbox" name="botcheck" className="hidden" style={{display: 'none'}} />
+                
+                {submitError && (
+		    <p className="text-sm text-red-600 font-body-md">{submitError}</p>
+		  )}
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="bg-[#546251] text-white px-8 py-3.5 rounded-full font-label-sm text-sm hover:bg-[#475749] transition-colors w-full sm:w-auto shadow-md cursor-pointer"
                 >
-                  Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             ) : (
@@ -260,6 +303,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModa
                   onClick={() => {
                     setSubmittedMessage(false);
                     setContactName('');
+                    setContactEmail('');
                     setContactMsg('');
                   }}
                   className="bg-[#475749] text-white px-6 py-2 rounded-full font-label-sm text-xs cursor-pointer"
