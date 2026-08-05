@@ -12,12 +12,59 @@ export const PrayerModal: React.FC<PrayerModalProps> = ({ isOpen, onClose }) => 
   const [category, setCategory] = useState('Prayer Request');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          botcheck: "",
+          subject: `${category} — ${CHURCH_INFO.shortName} Website`,
+          from_name: "Church Website Prayer Request Form",
+          request_type: category,
+          name: name,
+          contact: contact,
+          message: message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setSubmitError(data.message || "Something went wrong. Please try again, or contact us directly.");
+      }
+    } catch (err) {
+      setSubmitError("Network error — please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const resetAndClose = () => {
+    setSubmitted(false);
+    setName('');
+    setContact('');
+    setCategory('Prayer Request');
+    setMessage('');
+    setSubmitError('');
+    onClose();
   };
 
   return (
@@ -43,6 +90,14 @@ export const PrayerModal: React.FC<PrayerModalProps> = ({ isOpen, onClose }) => 
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: 'none' }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
               <div>
                 <label className="block text-xs font-semibold text-[#1c1c18] mb-1">Type of Request</label>
                 <select
@@ -92,13 +147,18 @@ export const PrayerModal: React.FC<PrayerModalProps> = ({ isOpen, onClose }) => 
                   className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#546251] focus:outline-none"
                 ></textarea>
               </div>
+              
+              {submitError && (
+                <p className="text-sm text-red-600">{submitError}</p>
+              )}
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-[#546251] text-white py-3 rounded-full font-label-sm text-sm hover:bg-[#475749] transition-colors shadow-sm cursor-pointer flex items-center justify-center gap-2"
               >
-                <span className="material-symbols-outlined text-[18px]">send</span>
-                <span>Submit Prayer Request</span>
+                <span className="material-symbols-outlined text-[18px]">{isSubmitting ? "hourglass_empty" : "send"}</span>
+                <span>{isSubmitting ? "Submitting..." : "Submit Prayer Request"}</span>
               </button>
             </form>
           </div>
@@ -115,10 +175,7 @@ export const PrayerModal: React.FC<PrayerModalProps> = ({ isOpen, onClose }) => 
               "For where two or three gather in my name, there am I with them." — Matthew 18:20
             </p>
             <button
-              onClick={() => {
-                setSubmitted(false);
-                onClose();
-              }}
+              onClick={resetAndClose}
               className="bg-[#475749] text-white px-8 py-2 rounded-full font-label-sm text-sm cursor-pointer"
             >
               Close

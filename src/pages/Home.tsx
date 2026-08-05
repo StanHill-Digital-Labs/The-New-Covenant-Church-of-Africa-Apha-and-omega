@@ -231,6 +231,15 @@ const handleContactSubmit = async (e: React.FormEvent) => {
           <div className="p-8 sm:p-12 md:w-3/5 bg-[#fcf9f3]">
             {!submittedMessage ? (
               <form onSubmit={handleContactSubmit} className="space-y-6">
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: 'none' }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+              
                 <div>
                   <label className="block font-label-sm text-sm text-[#1c1c18] mb-2 font-bold" htmlFor="name">
                     Name
@@ -275,9 +284,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
                     className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#546251] focus:outline-none transition-colors text-sm"
                   ></textarea>
                 </div>
-                
-                <input type="checkbox" name="botcheck" className="hidden" style={{display: 'none'}} />
-                
+                                
                 {submitError && (
 		    <p className="text-sm text-red-600 font-body-md">{submitError}</p>
 		  )}
