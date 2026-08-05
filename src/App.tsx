@@ -6,6 +6,7 @@ import { SupportModal } from './components/SupportModal';
 import { PrayerModal } from './components/PrayerModal';
 import { ShareModal } from './components/ShareModal';
 import { SermonPlayerModal } from './components/SermonPlayerModal';
+import { SermonPlayerModalYoutube } from './components/SermonPlayerModalYoutube';
 import { LessonReaderModal } from './components/LessonReaderModal';
 import { BranchesModal } from './components/BranchesModal';
 import { PrivacyModal } from './components/PrivacyModal';
@@ -13,6 +14,7 @@ import { PrivacyModal } from './components/PrivacyModal';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Sermons } from './pages/Sermons';
+import { SermonsYoutube } from './pages/SermonsYoutube';
 import { NotFound } from './pages/NotFound';
 
 import { Sermon, Lesson } from './types';
@@ -117,7 +119,12 @@ export default function App() {
           onClose={() => setPrivacyModalOpen(false)}
         />
 
-        <SermonPlayerModal
+        {/*<SermonPlayerModal
+          sermon={activeSermon}
+          onClose={() => setActiveSermon(null)}
+        />*/}
+        
+        <SermonPlayerModalYoutube
           sermon={activeSermon}
           onClose={() => setActiveSermon(null)}
         />

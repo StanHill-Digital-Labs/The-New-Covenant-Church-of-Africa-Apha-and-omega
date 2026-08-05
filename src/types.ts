@@ -17,6 +17,7 @@ export interface Sermon {
   type: 'video' | 'audio';
   duration: string;
   featured?: boolean;
+  youtubeId?: string;
   audioUrl?: string;
   summaryPoints?: string[];
 }

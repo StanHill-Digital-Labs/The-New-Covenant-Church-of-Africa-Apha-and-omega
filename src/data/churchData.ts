@@ -71,6 +71,7 @@ export const SERMONS: Sermon[] = [
     speaker: 'Prophet Raphael Zedekiah',
     description: "An in-depth exploration of navigating life's storms anchored by faith and the enduring promises found within the scriptures.",
     image: IMAGES.sermonPulpit,
+    youtubeId: 'iwcjcSEmw60',
     type: 'video',
     duration: '48 min',
     featured: true,
@@ -88,6 +89,7 @@ export const SERMONS: Sermon[] = [
     speaker: 'Guest Speaker',
     description: 'A transformative teaching on aligning your daily habits, thoughts, and career with God’s eternal purpose.',
     image: IMAGES.sermonBible,
+    youtubeId: 'iwcjcSEmw60',
     type: 'video',
     duration: '35 min',
     summaryPoints: [
@@ -103,6 +105,7 @@ export const SERMONS: Sermon[] = [
     speaker: 'Prophet Raphael Zedekiah',
     description: 'A deep biblical study on unmerited favor and how grace serves as the bedrock of covenant relationship.',
     image: IMAGES.sermonChapel,
+    youtubeId: 'iwcjcSEmw60',
     type: 'audio',
     duration: '42 min',
     summaryPoints: [
@@ -118,6 +121,7 @@ export const SERMONS: Sermon[] = [
     speaker: 'Linus Wesonga Wanyama',
     description: 'Practical guidance for raising children in the way of the Lord and sustaining strong, prayerful marriages.',
     image: IMAGES.communityMumias,
+    youtubeId: 'iwcjcSEmw60',
     type: 'audio',
     duration: '39 min',
     summaryPoints: [
