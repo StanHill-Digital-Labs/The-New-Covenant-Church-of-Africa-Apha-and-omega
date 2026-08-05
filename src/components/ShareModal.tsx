@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { QRCodeSVG } from 'qrcode.react';
 import { CHURCH_INFO } from '../data/churchData';
 
 interface ShareModalProps {
@@ -33,45 +34,25 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
           <span className="material-symbols-outlined text-2xl">qr_code_2</span>
         </div>
 
-        <h3 className="font-headline-lg text-[22px] text-[#475749]">Church Directory & QR</h3>
+        <h3 className="font-headline-lg text-[22px] text-[#475749]">Help us Share The Word</h3>
         <p className="font-body-md text-xs text-[#434843] mt-1 mb-4">
-          Scan or share to connect with {CHURCH_INFO.fullName}
+          A simple scan could lead someone home.
         </p>
 
         {/* Generated SVG QR Code representation */}
         <div className="bg-white p-4 rounded-xl border border-[#c3c8c1] inline-block mb-4 shadow-sm">
-          <svg className="w-40 h-40 mx-auto" viewBox="0 0 100 100">
-            <rect width="100" height="100" fill="#ffffff" />
-            {/* Position markers */}
-            <rect x="10" y="10" width="25" height="25" fill="#475749" />
-            <rect x="15" y="15" width="15" height="15" fill="#ffffff" />
-            <rect x="18" y="18" width="9" height="9" fill="#475749" />
-
-            <rect x="65" y="10" width="25" height="25" fill="#475749" />
-            <rect x="70" y="15" width="15" height="15" fill="#ffffff" />
-            <rect x="73" y="18" width="9" height="9" fill="#475749" />
-
-            <rect x="10" y="65" width="25" height="25" fill="#475749" />
-            <rect x="15" y="70" width="15" height="15" fill="#ffffff" />
-            <rect x="18" y="73" width="9" height="9" fill="#475749" />
-
-            {/* Random data squares representation */}
-            <rect x="42" y="12" width="6" height="6" fill="#475749" />
-            <rect x="50" y="18" width="6" height="6" fill="#475749" />
-            <rect x="42" y="28" width="6" height="6" fill="#475749" />
-            <rect x="12" y="42" width="6" height="6" fill="#475749" />
-            <rect x="24" y="48" width="6" height="6" fill="#475749" />
-            <rect x="42" y="42" width="16" height="16" fill="#475749" />
-            <rect x="65" y="42" width="8" height="8" fill="#475749" />
-            <rect x="78" y="48" width="8" height="8" fill="#475749" />
-            <rect x="42" y="65" width="8" height="8" fill="#475749" />
-            <rect x="54" y="78" width="8" height="8" fill="#475749" />
-            <rect x="68" y="68" width="14" height="14" fill="#475749" />
-          </svg>
-          <span className="text-[10px] font-bold text-[#546251] block mt-1 tracking-wider uppercase">
-            Official Church Directory
-          </span>
-        </div>
+  <QRCodeSVG
+    value={currentUrl}
+    size={160}
+    bgColor="#ffffff"
+    fgColor="#475749"
+    level="M"
+    className="mx-auto"
+  />
+  <span className="text-[10px] font-bold text-[#546251] block mt-1 tracking-wider uppercase">
+    Scan to Visit Our Website
+  </span>
+</div>
 
         <div className="text-xs text-[#434843] space-y-1 mb-4 text-left bg-[#f0eee8] p-3 rounded-lg border border-[#c3c8c1]">
           <p><strong>Address:</strong> {CHURCH_INFO.address}</p>
