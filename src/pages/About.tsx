@@ -109,49 +109,47 @@ export const About: React.FC<AboutProps> = ({ onOpenPrayerModal }) => {
       {/* Leader Bio Modal */}
       {selectedLeader && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fadeIn">
-          <div className="relative w-full max-w-lg bg-[#fcf9f3] rounded-2xl shadow-2xl border border-[#c3c8c1] p-6 sm:p-8 overflow-hidden">
-            <button
-              onClick={() => setSelectedLeader(null)}
-              className="absolute top-4 right-4 text-[#747872] hover:text-[#1c1c18] p-2 rounded-full hover:bg-[#e5e2dc] transition-colors cursor-pointer"
-            >
-              <span className="material-symbols-outlined">close</span>
-            </button>
-
-            <div className="text-center mb-4">
-              <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#d7e7d1] shadow-md">
-                <img
-                  src={selectedLeader.image}
-                  alt={selectedLeader.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-headline-lg text-[24px] text-[#475749]">{selectedLeader.name}</h3>
-              <p className="font-label-sm text-xs text-[#546251] uppercase tracking-wider font-bold">
-                {selectedLeader.role}
-              </p>
-            </div>
-
-            <p className="font-body-md text-sm text-[#1c1c18] leading-relaxed mb-4 bg-[#f0eee8] p-4 rounded-xl border border-[#c3c8c1]">
-              {selectedLeader.bio}
-            </p>
-
-            {selectedLeader.scriptureQuote && (
-              <blockquote className="italic text-xs text-[#565348] border-l-4 border-[#546251] pl-3 py-1 mb-6">
-                {selectedLeader.scriptureQuote}
-              </blockquote>
-            )}
-
-            <div className="text-center">
-              <button
-                onClick={() => setSelectedLeader(null)}
-                className="bg-[#475749] text-white px-6 py-2 rounded-full font-label-sm text-xs cursor-pointer"
-              >
-                Close Profile
-              </button>
-            </div>
+    <div className="relative w-full max-w-lg max-h-[90vh] bg-[#fcf9f3] rounded-2xl shadow-2xl border border-[#c3c8c1] overflow-y-auto">
+      <div className="p-5 sm:p-8">
+        <button
+          onClick={() => setSelectedLeader(null)}
+          className="absolute top-4 right-4 text-[#747872] hover:text-[#1c1c18] p-2 rounded-full hover:bg-[#e5e2dc] transition-colors cursor-pointer z-10"
+        >
+          <span className="material-symbols-outlined">close</span>
+        </button>
+        <div className="text-center mb-4">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#d7e7d1] shadow-md">
+            <img
+              src={selectedLeader.image}
+              alt={selectedLeader.name}
+              className="w-full h-full object-cover"
+            />
           </div>
+          <h3 className="font-headline-lg text-[20px] sm:text-[24px] text-[#475749]">{selectedLeader.name}</h3>
+          <p className="font-label-sm text-xs text-[#546251] uppercase tracking-wider font-bold">
+            {selectedLeader.role}
+          </p>
         </div>
-      )}
+        <p className="font-body-md text-sm text-[#1c1c18] leading-relaxed mb-4 bg-[#f0eee8] p-4 rounded-xl border border-[#c3c8c1]">
+          {selectedLeader.bio}
+        </p>
+        {selectedLeader.scriptureQuote && (
+          <blockquote className="italic text-xs text-[#565348] border-l-4 border-[#546251] pl-3 py-1 mb-6">
+            {selectedLeader.scriptureQuote}
+          </blockquote>
+        )}
+        <div className="text-center">
+          <button
+            onClick={() => setSelectedLeader(null)}
+            className="bg-[#475749] text-white px-6 py-2 rounded-full font-label-sm text-xs cursor-pointer"
+          >
+            Close Profile
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
     </main>
   );
 };
