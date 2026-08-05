@@ -13,13 +13,13 @@ export const Footer: React.FC<FooterProps> = ({
 }) => {
   return (
     <footer className="bg-[#f0eee8] border-t border-[#c3c8c1] w-full py-16">
-      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
         {/* Brand & Copyright */}
         <div className="space-y-4">
           <p className="font-headline-md text-[20px] text-[#546251] font-bold leading-tight">
             {CHURCH_INFO.fullName}
           </p>
-          <p className="font-body-md text-[12pt] text-[#434843]">
+          <p className="text-[12px] md:text- text-[#434843]">
             © {FOUNDING_YEAR}–{new Date().getFullYear()} {CHURCH_INFO.fullName}. All rights reserved.
           </p>
         </div>
@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({
             href={`https://maps.google.com/?q=${encodeURIComponent(CHURCH_INFO.address)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-label-sm text-[14px] text-[#434843] hover:text-[#546251] transition-colors leading-relaxed"
+            className="font-label-sm mb-4 text-[14px] text-[#434843] hover:text-[#546251] transition-colors leading-relaxed"
           >
             {CHURCH_INFO.address}
           </a>
