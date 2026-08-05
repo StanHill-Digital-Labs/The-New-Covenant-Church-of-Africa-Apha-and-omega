@@ -22,7 +22,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
         <h3 className="font-headline-lg text-[22px] text-[#475749]">Privacy Policy & Data Security</h3>
         
         <p className="font-body-md text-xs text-[#434843]">
-          {CHURCH_INFO.fullName} ("we", "our", or "the Church") is committed to honoring your privacy and safeguarding your personal information.
+          {CHURCH_INFO.fullName} is committed to honoring your privacy and safeguarding your personal information.
         </p>
 
         <div className="space-y-3 text-xs text-[#1c1c18] font-body-md leading-relaxed">
