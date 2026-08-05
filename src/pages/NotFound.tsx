@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const NotFound: React.FC = () => {
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 py-20">
+    <div className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 py-20">
       <span className="material-symbols-outlined text-6xl text-[#546251] mb-4">
         search_off
       </span>

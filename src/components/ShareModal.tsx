@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import { CHURCH_INFO } from '../data/churchData';
 
@@ -9,16 +9,46 @@ interface ShareModalProps {
 
 export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
   const [copied, setCopied] = useState(false);
+  const copyTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   if (!isOpen) return null;
 
   const sermonsUrl = `${window.location.origin}/sermons`;
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(currentUrl);
+  const handleCopy = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(sermonsUrl);
+    } else {
+      // Fallback for browsers without Clipboard API
+      const textarea = document.createElement("textarea");
+      textarea.value = sermonsUrl;
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      const success = document.execCommand("copy");
+      document.body.removeChild(textarea);
+      if (!success) {
+        throw new Error("Copying failed.");
+      }
+    }
+
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+
+    // clear any existing timer before setting a new one, so rapid clicks
+    // don't cause the label to flip back early
+    if (copyTimeoutRef.current) clearTimeout(copyTimeoutRef.current);
+    copyTimeoutRef.current = setTimeout(() => setCopied(false), 2000);
+  } catch (err) {
+    console.error(err);
+    alert("Sorry, your browser doesn't support copying automatically.");
+  }
+};
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-fadeIn">
@@ -65,10 +95,10 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
             onClick={handleCopy}
             className="flex-1 bg-[#475749] text-white py-2.5 rounded-full font-label-sm text-xs hover:bg-[#5f6f60] transition-colors cursor-pointer flex items-center justify-center gap-1"
           >
-            <span className="material-symbols-outlined text-[16px]">
+            <span className="material-symbols-outlined text-[16px] transition-transform duration-300">
               {copied ? 'check' : 'content_copy'}
             </span>
-            <span>{copied ? 'Link Copied!' : 'Copy Web Link'}</span>
+            <span className="transition-opacity duration-300">{copied ? 'Link Copied!' : 'Copy Web Link'}</span>
           </button>
           
           <a
