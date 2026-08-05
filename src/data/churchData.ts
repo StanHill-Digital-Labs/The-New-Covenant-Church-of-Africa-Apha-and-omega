@@ -138,16 +138,16 @@ export const LESSONS: Lesson[] = [
     author: 'Prophet Raphael Zedekiah',
     date: 'Oct 20, 2023',
     content: `
-      Every great move of God is preceded by a season of quiet preparation. Before the rain falls upon dry ground, the soil must first be tilled and seed planted in quiet faith.
+Every great move of God is preceded by a season of quiet preparation. Before the rain falls upon dry ground, the soil must first be tilled and seed planted in quiet faith.
       
-      ### 1. Consecration of the Heart
-      In Joshua 3:5, Joshua instructed the people: "Sanctify yourselves, for tomorrow the LORD will do wonders among you." Consecration is not merely abstaining from wrong; it is actively setting apart your heart, mind, and hands for divine service.
+### 1. Consecration of the Heart
+In Joshua 3:5, Joshua instructed the people: "Sanctify yourselves, for tomorrow the LORD will do wonders among you." Consecration is not merely abstaining from wrong; it is actively setting apart your heart, mind, and hands for divine service.
       
-      ### 2. Discerning Spiritual Seasons
-      Just as farmers in Matungu observe the sky and soil before planting, spiritual believers must discern the signs of their spiritual season. Are you in a season of pruning, planting, or harvest? Recognizing your season prevents impatience and spiritual weariness.
+### 2. Discerning Spiritual Seasons
+Just as farmers in Matungu observe the sky and soil before planting, spiritual believers must discern the signs of their spiritual season. Are you in a season of pruning, planting, or harvest? Recognizing your season prevents impatience and spiritual weariness.
       
-      ### 3. Steadfastness in Quiet Devotion
-      The depth of your public victory is determined by the sincerity of your private prayer closet. Set aside dedicated time each morning for scripture reading and silent prayer.
+### 3. Steadfastness in Quiet Devotion
+The depth of your public victory is determined by the sincerity of your private prayer closet. Set aside dedicated time each morning for scripture reading and silent prayer.
     `
   },
   {
@@ -159,16 +159,16 @@ export const LESSONS: Lesson[] = [
     author: 'Elder Daniel Muhuyi',
     date: 'Oct 14, 2023',
     content: `
-      The Book of Proverbs is God’s practical blueprint for honorable living, wise stewardship, and peaceable community relations.
+The Book of Proverbs is God’s practical blueprint for honorable living, wise stewardship, and peaceable community relations.
       
-      ### The Fear of the Lord as the Beginning
-      Proverbs 1:7 teaches that "The fear of the LORD is the beginning of knowledge, but fools despise wisdom and instruction." Here, fear does not mean terror, but awe-filled reverence and willingness to align one’s conduct with divine truth.
+### The Fear of the Lord as the Beginning
+Proverbs 1:7 teaches that "The fear of the LORD is the beginning of knowledge, but fools despise wisdom and instruction." Here, fear does not mean terror, but awe-filled reverence and willingness to align one’s conduct with divine truth.
       
-      ### Guarding Your Heart
-      Proverbs 4:23 urges us to keep our heart with all vigilance, for from it flow the springs of life. What we allow into our minds through speech, media, and counsel shapes our spiritual destiny.
+### Guarding Your Heart
+Proverbs 4:23 urges us to keep our heart with all vigilance, for from it flow the springs of life. What we allow into our minds through speech, media, and counsel shapes our spiritual destiny.
       
-      ### Practical Financial Honesty
-      Proverbs emphasizes honest labor, avoiding reckless debt, and honoring God with the firstfruits of all our produce.
+### Practical Financial Honesty
+Proverbs emphasizes honest labor, avoiding reckless debt, and honoring God with the firstfruits of all our produce.
     `
   },
   {
@@ -180,13 +180,13 @@ export const LESSONS: Lesson[] = [
     author: 'Prophet Raphael Zedekiah',
     date: 'Oct 05, 2023',
     content: `
-      When winds roar and waves crash against the vessel, it is not the strength of the sail but the grip of the anchor that holds the ship steady.
+When winds roar and waves crash against the vessel, it is not the strength of the sail but the grip of the anchor that holds the ship steady.
+     
+### Unshakable Promises
+God's covenant with His people Alpha and Omega is eternal. Isaiah 54:10 promises: "Though the mountains be shaken and the hills be removed, yet my unfailing love for you will not be shaken nor my covenant of peace be removed."
       
-      ### Unshakable Promises
-      God's covenant with His people Alpha and Omega is eternal. Isaiah 54:10 promises: "Though the mountains be shaken and the hills be removed, yet my unfailing love for you will not be shaken nor my covenant of peace be removed."
-      
-      ### Living as Covenant Heirs
-      When you understand your standing in Christ, anxiety loses its authority over your household. Walk with assurance, knowing that the Lord God of Africa shields those who trust in Him.
+### Living as Covenant Heirs
+When you understand your standing in Christ, anxiety loses its authority over your household. Walk with assurance, knowing that the Lord God of Africa shields those who trust in Him.
     `
   },
   {
@@ -198,13 +198,13 @@ export const LESSONS: Lesson[] = [
     author: 'Jackline Khaombi Kasiani',
     date: 'Sep 28, 2023',
     content: `
-      Faith without works is dead. At The New Covenant Church of Africa, we believe that preachings must be accompanied by outstretched hands.
+Faith without works is dead. At The New Covenant Church of Africa, we believe that preachings must be accompanied by outstretched hands.
       
-      ### Feeding the Vulnerable
-      Our weekly relief drive in Matungu subcounty ensures that widows, orphans, and struggling families receive physical nourishment alongside spiritual comfort.
+### Feeding the Vulnerable
+Our weekly relief drive in Matungu subcounty ensures that widows, orphans, and struggling families receive physical nourishment alongside spiritual comfort.
       
-      ### Healthcare and Compassion
-      By providing basic medical outreach and clean water support, we demonstrate that God cares for both the body and the soul.
+### Healthcare and Compassion
+By providing basic medical outreach and clean water support, we demonstrate that God cares for both the body and the soul.
     `
   }
 ];
