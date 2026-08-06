@@ -175,6 +175,19 @@ export const Header: React.FC<HeaderProps> = ({
             >
               About Us
             </Link>
+            
+            <Link
+              to="/events"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`py-2 px-3 rounded-lg text-[16px] transition-colors ${
+                isActive('/events')
+                  ? 'bg-[#d7e7d1] text-[#121f11] font-bold'
+                  : 'text-[#434843] hover:bg-[#f0eee8]'
+              }`}
+            >
+              Events
+            </Link>
+            
             <Link
               to="/sermons"
               onClick={() => setMobileMenuOpen(false)}
