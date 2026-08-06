@@ -13,6 +13,7 @@ import { PrivacyModal } from './components/PrivacyModal';
 
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Events } from './pages/Events';
 import { Sermons } from './pages/Sermons';
 import { SermonsYoutube } from './pages/SermonsYoutube';
 import { NotFound } from './pages/NotFound';
@@ -64,6 +65,14 @@ export default function App() {
               path="/about"
               element={
                 <About
+                  onOpenPrayerModal={() => setPrayerModalOpen(true)}
+                />
+              }
+            />
+            <Route
+              path="/events"
+              element={
+                <Events
                   onOpenPrayerModal={() => setPrayerModalOpen(true)}
                 />
               }
