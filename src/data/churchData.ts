@@ -1,4 +1,4 @@
-import { Leader, Sermon, Lesson, Branch } from '../types';
+import { Leader, Sermon, Lesson, Branch, ChurchEvent } from '../types';
 
 export const CHURCH_INFO = {
   fullName: 'THE NEW COVENANT CHURCH OF AFRICA ALPHA AND OMEGA',
@@ -237,5 +237,102 @@ export const BRANCHES: Branch[] = [
     location: 'Upper Hill Christian Center, Nairobi',
     leader: 'Elder David Wafula',
     phone: '+254 701 234 567'
+  }
+];
+
+export const BELIEFS = [
+  {
+    id: 'scriptures',
+    title: 'The Holy Scriptures',
+    icon: 'auto_stories',
+    description: 'We believe the Holy Bible is the inspired, infallible, and authoritative Word of God, serving as the supreme rule for faith, practice, and spiritual living.'
+  },
+  {
+    id: 'trinity',
+    title: 'The Holy Trinity',
+    icon: 'diversity_3',
+    description: 'We believe in one eternal God, existing in three distinct persons: God the Father, God the Son (Jesus Christ), and God the Holy Spirit.'
+  },
+  {
+    id: 'salvation',
+    title: 'Salvation & Grace',
+    icon: 'volunteer_activism',
+    description: 'We believe that salvation is a free gift of divine grace received through faith in Jesus Christ, whose sacrificial death and resurrection redeemed humanity.'
+  },
+  {
+    id: 'prophetic',
+    title: 'Prophetic Ministry & Holy Spirit',
+    icon: 'psychology_alt',
+    description: 'We believe in the active presence and gifts of the Holy Spirit, including prophetic revelation, divine healing, and spiritual discernment for today.'
+  },
+  {
+    id: 'community',
+    title: 'Holistic Care & Mercy',
+    icon: 'cardology',
+    description: 'We believe true worship manifests in practical love—caring for widows, orphans, the sick, and the needy in Mumias and across Africa.'
+  },
+  {
+    id: 'covenant',
+    title: 'The New Covenant',
+    icon: 'gavel',
+    description: 'We believe believers are joined in a sacred covenant with God, called to live in righteousness, unity, peace, and eternal hope.'
+  }
+];
+
+export const EVENTS: ChurchEvent[] = [
+  {
+    id: 'event-1',
+    title: 'Sunday Victory & Prophetic Worship Service',
+    date: 'Sun, Nov 12, 2023',
+    time: '9:00 AM - 12:30 PM',
+    location: 'Mumias Main Cathedral',
+    category: 'Worship',
+    description: 'Join us for an uplifting morning of prophetic praise, powerful intercession, and divine revelatory teaching with Prophet Raphael Zedekiah.',
+    isPast: false,
+    image: IMAGES.sermonPulpit
+  },
+  {
+    id: 'event-2',
+    title: 'Weekly Prayer & Deliverance Night',
+    date: 'Wed, Nov 15, 2023',
+    time: '5:00 PM - 7:00 PM',
+    location: 'Mumias Main Cathedral & Online',
+    category: 'Prayer',
+    description: 'A powerful midweek gathering focused on intercessory prayer, spiritual warfare, and breaking chains through the Word of God.',
+    isPast: false,
+    image: IMAGES.sermonChapel
+  },
+  {
+    id: 'event-3',
+    title: 'Youth & Young Adults Fellowship',
+    date: 'Sat, Nov 18, 2023',
+    time: '2:00 PM - 5:00 PM',
+    location: 'Mumias Youth Sanctuary',
+    category: 'Youth',
+    description: 'Empowering the next generation with divine purpose, spiritual guidance, mentorship, music, and interactive Bible discussions.',
+    isPast: false,
+    image: IMAGES.communityMumias
+  },
+  {
+    id: 'event-4',
+    title: 'Matungu Community Food & Medical Outreach',
+    date: 'Sat, Oct 28, 2023',
+    time: '10:00 AM - 4:00 PM',
+    location: 'Mirere Sub Location Grounds',
+    category: 'Outreach',
+    description: 'A practical gospel witness serving over 300 families with food baskets, basic health screenings, and prayer support.',
+    isPast: true,
+    image: IMAGES.sermonBible
+  },
+  {
+    id: 'event-5',
+    title: 'Annual Covenant Prophetic Conference',
+    date: 'Fri, Sep 15, 2023',
+    time: '8:30 AM - 5:00 PM',
+    location: 'Mumias Main Cathedral',
+    category: 'Special',
+    description: 'A 3-day spiritual summit bringing together regional leaders and assemblies across Kenya for prayer and consecration.',
+    isPast: true,
+    image: IMAGES.baobabHero
   }
 ];
