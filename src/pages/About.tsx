@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IMAGES, LEADERS, CHURCH_INFO } from '../data/churchData';
+import { IMAGES, LEADERS, CHURCH_INFO, BELIEFS } from '../data/churchData';
 import { Leader } from '../types';
 
 interface AboutProps {
@@ -38,6 +38,47 @@ export const About: React.FC<AboutProps> = ({ onOpenPrayerModal }) => {
               alt="Majestic Baobab Tree at Sunrise"
               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
             />
+          </div>
+        </div>
+      </section>
+      
+      {/* 2. What We Believe Section */}
+      <section className="bg-[#f0eee8] py-20 border-y border-[#c3c8c1]/60">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-16 space-y-4 max-w-2xl mx-auto">
+            <span className="font-label-sm text-xs text-[#546251] uppercase tracking-wider font-bold">
+              Doctrinal Foundation
+            </span>
+            <h2 className="font-headline-lg text-[32px] md:text-[40px] text-[#475749] font-semibold">
+              What We Believe
+            </h2>
+            <p className="font-body-md text-[16px] text-[#434843]">
+              Our faith is firmly grounded in the everlasting truths of Holy Scripture, guided by prophetic revelation and covenant grace.
+            </p>
+            <div className="w-24 h-1 bg-[#546251] mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {BELIEFS.map((belief) => (
+              <div
+                key={belief.id}
+                className="bg-[#fcf9f3] rounded-2xl p-8 border border-[#c3c8c1] shadow-xs hover:shadow-md transition-all duration-300 flex flex-col space-y-4 group"
+              >
+                <div className="w-14 h-14 bg-[#d7e7d1] rounded-2xl flex items-center justify-center text-[#121f11] shadow-2xs group-hover:bg-[#475749] group-hover:text-white transition-colors duration-300">
+                  <span className="material-symbols-outlined text-[28px]">
+                    {belief.icon}
+                  </span>
+                </div>
+
+                <h3 className="font-headline-md text-[22px] text-[#475749] font-bold">
+                  {belief.title}
+                </h3>
+
+                <p className="font-body-md text-[15px] text-[#434843] leading-relaxed">
+                  {belief.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
