@@ -74,6 +74,16 @@ export const Header: React.FC<HeaderProps> = ({
             About Us
           </Link>
           <Link
+            to="/events"
+            className={`font-label-sm text-[14px] transition-colors py-1 ${
+              isActive('/events')
+                ? 'text-[#475749] font-bold border-b-2 border-[#475749]'
+                : 'text-[#434843] hover:text-[#475749]'
+            }`}
+          >
+            Events
+          </Link>
+          <Link
             to="/sermons"
             className={`font-label-sm text-[14px] transition-colors py-1 ${
               isActive('/sermons')
