@@ -58,6 +58,7 @@ export default function App() {
                 <Home
                   onOpenSupportModal={() => setSupportModalOpen(true)}
                   onOpenPrayerModal={() => setPrayerModalOpen(true)}
+                  onSelectSermon={(sermon) => setActiveSermon(sermon)}
                 />
               }
             />

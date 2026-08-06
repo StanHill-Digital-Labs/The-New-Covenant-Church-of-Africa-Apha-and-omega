@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { IMAGES, CHURCH_INFO } from '../data/churchData';
+import { Link } from 'react-router-dom';
+import { IMAGES, CHURCH_INFO, SERMONS, EVENTS } from '../data/churchData';
+import { Sermon } from '../types';
 
 interface HomeProps {
   onOpenSupportModal: () => void;
   onOpenPrayerModal: () => void;
+  onSelectSermon?: (sermon: Sermon) => void;
 }
 
-export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModal }) => {
+export const Home: React.FC<HomeProps> = ({ onOpenSupportModal, onOpenPrayerModal, onSelectSermon }) => {
  const [contactName, setContactName] = useState('');
 const [contactEmail, setContactEmail] = useState('');
 const [contactMsg, setContactMsg] = useState('');
@@ -97,6 +100,28 @@ const handleContactSubmit = async (e: React.FormEvent) => {
           </div>
         </div>
       </section>
+      
+      {/* 2. Compact Service Times / Address Bar */}
+      <div className="bg-[#f0eee8] border-y border-[#c3c8c1]/60 py-4 px-6 shadow-xs">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-[#434843]">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 font-label-sm text-[13px] sm:text-[14px]">
+            <div className="flex items-center gap-2 text-[#475749] font-bold">
+              <span className="material-symbols-outlined text-[20px] text-[#546251]">schedule</span>
+              <span>Sunday Worship: 9:00 AM</span>
+            </div>
+            <span className="hidden sm:inline text-[#c3c8c1]">•</span>
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-[20px] text-[#546251]">event</span>
+              <span>Wednesday Prayer: 5:00 PM</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 font-body-md text-[13px] sm:text-[14px] text-[#434843] truncate max-w-full">
+            <span className="material-symbols-outlined text-[20px] text-[#546251] shrink-0">location_on</span>
+            <span className="truncate">{CHURCH_INFO.address}</span>
+          </div>
+        </div>
+      </div>
 
       {/* Vision & Mission Block (Bento Grid Style) */}
       <section className="max-w-[1200px] mx-auto px-6 py-20">
@@ -143,6 +168,169 @@ const handleContactSubmit = async (e: React.FormEvent) => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      
+      {/* 4. Latest Message Section */}
+      <section className="bg-[#f6f3ed] py-20 border-y border-[#c3c8c1]/40">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+              <span className="font-label-sm text-xs text-[#546251] uppercase tracking-wider font-bold">Spiritual Nurturing</span>
+              <h2 className="font-headline-lg text-[32px] md:text-[40px] text-[#475749] font-semibold mt-1">
+                Latest Message
+              </h2>
+            </div>
+            <Link
+              to="/sermons"
+              className="text-[#475749] font-label-sm text-sm font-bold hover:underline flex items-center gap-1"
+            >
+              <span>View Full Sermon Library</span>
+              <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </Link>
+          </div>
+
+          {SERMONS.length > 0 && (() => {
+            const latest = SERMONS[0];
+            return (
+              <div className="bg-[#fcf9f3] rounded-2xl border border-[#c3c8c1] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 grid grid-cols-1 md:grid-cols-12 gap-0">
+                <div className="md:col-span-5 relative min-h-[260px] md:min-h-[340px] bg-[#f0eee8]">
+                  <img
+                    src={latest.image}
+                    alt={latest.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-4 left-4 bg-[#475749] text-white px-3 py-1 rounded-full text-xs font-label-sm font-bold shadow-xs">
+                    Latest Sermon
+                  </span>
+                </div>
+                <div className="md:col-span-7 p-8 sm:p-10 flex flex-col justify-between space-y-6">
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-[#546251] font-label-sm font-bold">
+                      <span className="flex items-center gap-1">
+                        <span className="material-symbols-outlined text-[16px]">calendar_today</span>
+                        {latest.date}
+                      </span>
+                      <span>•</span>
+                      <span className="flex items-center gap-1">
+                        <span className="material-symbols-outlined text-[16px]">person</span>
+                        {latest.speaker}
+                      </span>
+                      <span>•</span>
+                      <span className="bg-[#d7e7d1] text-[#121f11] px-2.5 py-0.5 rounded-full text-[11px]">
+                        {latest.duration}
+                      </span>
+                    </div>
+
+                    <h3 className="font-headline-md text-[24px] sm:text-[28px] text-[#1c1c18] font-bold leading-snug">
+                      {latest.title}
+                    </h3>
+
+                    <p className="font-body-md text-[15px] text-[#434843] leading-relaxed">
+                      {latest.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-2 flex flex-wrap items-center gap-4">
+                    {onSelectSermon ? (
+                      <button
+                        onClick={() => onSelectSermon(latest)}
+                        className="bg-[#475749] text-white px-6 py-3 rounded-full font-label-sm text-sm hover:bg-[#5f6f60] transition-colors inline-flex items-center gap-2 cursor-pointer shadow-xs"
+                      >
+                        <span className="material-symbols-outlined text-[20px]">
+                          {latest.type === 'video' ? 'play_circle' : 'headphones'}
+                        </span>
+                        <span>Listen / Watch Message</span>
+                      </button>
+                    ) : (
+                      <Link
+                        to="/sermons"
+                        className="bg-[#475749] text-white px-6 py-3 rounded-full font-label-sm text-sm hover:bg-[#5f6f60] transition-colors inline-flex items-center gap-2 shadow-xs"
+                      >
+                        <span className="material-symbols-outlined text-[20px]">play_circle</span>
+                        <span>Listen / Watch Message</span>
+                      </Link>
+                    )}
+
+                    <Link
+                      to="/sermons"
+                      className="text-[#546251] font-label-sm text-sm font-bold hover:underline"
+                    >
+                      Explore All Teachings &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      </section>
+
+      {/* 5. Upcoming Events Section */}
+      <section className="max-w-[1200px] mx-auto px-6 py-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span className="font-label-sm text-xs text-[#546251] uppercase tracking-wider font-bold">Fellowship & Community</span>
+            <h2 className="font-headline-lg text-[32px] md:text-[40px] text-[#475749] font-semibold mt-1">
+              Upcoming Events
+            </h2>
+          </div>
+          <Link
+            to="/events"
+            className="text-[#475749] font-label-sm text-sm font-bold hover:underline flex items-center gap-1"
+          >
+            <span>View All Events</span>
+            <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {EVENTS.filter((e) => !e.isPast).slice(0, 3).map((evt) => (
+            <div
+              key={evt.id}
+              className="bg-[#f0eee8] rounded-2xl border border-[#c3c8c1] overflow-hidden flex flex-col justify-between p-6 hover:shadow-md transition-all duration-300 group"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="bg-[#d7e7d1] text-[#121f11] font-label-sm text-xs font-bold px-3 py-1 rounded-full">
+                    {evt.category}
+                  </span>
+                  <span className="text-xs font-label-sm text-[#546251] font-bold">
+                    {evt.date}
+                  </span>
+                </div>
+
+                <h3 className="font-headline-md text-[20px] text-[#1c1c18] font-bold leading-snug group-hover:text-[#475749] transition-colors">
+                  {evt.title}
+                </h3>
+
+                <div className="space-y-1 text-xs text-[#434843] font-body-md">
+                  <div className="flex items-center gap-1.5">
+                    <span className="material-symbols-outlined text-[16px] text-[#546251]">schedule</span>
+                    <span>{evt.time}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 truncate">
+                    <span className="material-symbols-outlined text-[16px] text-[#546251] shrink-0">location_on</span>
+                    <span className="truncate">{evt.location}</span>
+                  </div>
+                </div>
+
+                <p className="font-body-md text-sm text-[#434843] line-clamp-3 leading-relaxed">
+                  {evt.description}
+                </p>
+              </div>
+
+              <div className="pt-6 mt-4 border-t border-[#c3c8c1]/40 flex items-center justify-between">
+                <Link
+                  to="/events"
+                  className="text-[#475749] font-label-sm text-xs font-bold hover:underline flex items-center gap-1"
+                >
+                  <span>Event Details</span>
+                  <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

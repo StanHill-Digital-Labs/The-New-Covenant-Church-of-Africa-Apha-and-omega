@@ -39,3 +39,15 @@ export interface Branch {
   leader: string;
   phone: string;
 }
+
+export interface ChurchEvent {
+  id: string;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  category: 'Worship' | 'Prayer' | 'Youth' | 'Outreach' | 'Special';
+  description: string;
+  isPast?: boolean;
+  image?: string;
+}
