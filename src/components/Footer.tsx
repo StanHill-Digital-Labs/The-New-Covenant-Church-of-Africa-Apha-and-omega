@@ -189,7 +189,14 @@ export const Footer: React.FC<FooterProps> = ({
 	  >
 	    ❤️
 	  </a>{" "}
-	  by StanHill Labs.
+	  <a
+	    href="https://stanhilllabs.com"
+	    target="_blank"
+	    rel="noopener noreferrer"
+	    className="inline-flex flex-col items-center after:content-[attr(data-text)] after:font-semibold after:invisible after:h-0 after:overflow-hidden hover:font-semibold"
+	    data-text="by StanHill Labs."
+	    aria-label="StanHill Labs"
+	  >by StanHill Labs. </a>
 	</p>
 
         </div>
