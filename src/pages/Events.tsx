@@ -129,7 +129,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
                   >
                     Event Details
                   </button>
-
+		{!evt.isPast==true &&
                   <a
                     href={`https://maps.google.com/?q=${encodeURIComponent(evt.location)}`}
                     target="_blank"
@@ -138,7 +138,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
                   >
                     <span>Directions</span>
                     <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                  </a>
+                  </a> }
                 </div>
               </div>
             ))}
