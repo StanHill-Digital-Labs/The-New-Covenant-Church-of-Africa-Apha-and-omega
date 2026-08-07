@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { EventDetailModal } from '../components/EventDetailModal';
+import { EventHighlightView } from '../components/EventHighlightView';
 import { EVENTS, CHURCH_INFO, IMAGES } from '../data/churchData';
 import { ChurchEvent } from '../types';
 
@@ -127,7 +128,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
                     onClick={() => setSelectedEvent(evt)}
                     className="bg-[#546251] text-white px-4 py-2 rounded-full font-label-sm text-xs hover:bg-[#475749] transition-colors cursor-pointer"
                   >
-                    Event Details
+                    {!evt.isPast==true ? 'Event Details' : 'See highlights'}
                   </button>
 		{!evt.isPast==true &&
                   <a
@@ -162,13 +163,21 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
       </section>
 
       {/* 4. Event Detail Modal */}
-      {selectedEvent && (
-      <EventDetailModal
-	  selectedEvent={selectedEvent}
-	  onClose={() => setSelectedEvent(null)}
-	  onOpenPrayerModal={onOpenPrayerModal}
-	/>
-        )}
+      {selectedEvent && !selectedEvent.isPast && (
+	  <EventDetailModal
+	    selectedEvent={selectedEvent}
+	    onClose={() => setSelectedEvent(null)}
+	    onOpenPrayerModal={onOpenPrayerModal}
+	  />
+	)}
+
+	{selectedEvent && selectedEvent.isPast && (
+	  <EventHighlightView
+	    selectedEvent={selectedEvent}
+	    onClose={() => setSelectedEvent(null)}
+	    onOpenPrayerModal={onOpenPrayerModal}
+	  />
+	)}
       
       {/* 5. Stay Connected Section */}
       <section className="bg-[#f0eee8] py-20 border-t border-[#c3c8c1]/60 mt-12">
