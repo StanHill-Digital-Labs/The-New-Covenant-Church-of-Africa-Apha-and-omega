@@ -269,7 +269,7 @@ export const BELIEFS = [
   {
     id: 'community',
     title: 'Holistic Care & Mercy',
-    icon: 'cardology',
+    icon: 'diversity_1',
     description: 'We believe true worship manifests in practical love—caring for widows, orphans, the sick, and the needy in Mumias and across Africa.'
   },
   {
