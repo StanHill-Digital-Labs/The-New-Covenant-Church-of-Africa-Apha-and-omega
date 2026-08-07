@@ -55,7 +55,7 @@ export const EventDetailModal: React.FC<EventDetailModalProps> = ({
           {selectedEvent.description}
         </p>
         <div className="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-[#c3c8c1]/40">
-          
+          {!selectedEvent.isPast==true &&
            <a href={`https://maps.google.com/?q=${encodeURIComponent(selectedEvent.location)}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -63,7 +63,7 @@ export const EventDetailModal: React.FC<EventDetailModalProps> = ({
           >
             <span className="material-symbols-outlined text-[16px]">map</span>
             <span>Open Map Directions</span>
-          </a>
+          </a> }
           {onOpenPrayerModal && (
             <button
               onClick={() => {
