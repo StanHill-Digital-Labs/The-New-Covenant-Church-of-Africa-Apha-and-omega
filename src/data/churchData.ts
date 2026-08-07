@@ -284,7 +284,7 @@ export const EVENTS: ChurchEvent[] = [
   {
     id: 'event-1',
     title: 'Sunday Victory & Prophetic Worship Service',
-    date: 'Sun, Nov 12, 2023',
+    date: 'Sun, Nov 12, 2026',
     time: '9:00 AM - 12:30 PM',
     location: 'Mumias Main Cathedral',
     category: 'Worship',
@@ -295,7 +295,7 @@ export const EVENTS: ChurchEvent[] = [
   {
     id: 'event-2',
     title: 'Weekly Prayer & Deliverance Night',
-    date: 'Wed, Nov 15, 2023',
+    date: 'Wed, Nov 15, 2026',
     time: '5:00 PM - 7:00 PM',
     location: 'Mumias Main Cathedral & Online',
     category: 'Prayer',
@@ -306,7 +306,7 @@ export const EVENTS: ChurchEvent[] = [
   {
     id: 'event-3',
     title: 'Youth & Young Adults Fellowship',
-    date: 'Sat, Nov 18, 2023',
+    date: 'Sat, Nov 18, 2026',
     time: '2:00 PM - 5:00 PM',
     location: 'Mumias Youth Sanctuary',
     category: 'Youth',
@@ -317,7 +317,7 @@ export const EVENTS: ChurchEvent[] = [
   {
     id: 'event-4',
     title: 'Matungu Community Food & Medical Outreach',
-    date: 'Sat, Oct 28, 2023',
+    date: 'Sat, Oct 28, 2025',
     time: '10:00 AM - 4:00 PM',
     location: 'Mirere Sub Location Grounds',
     category: 'Outreach',
@@ -328,7 +328,7 @@ export const EVENTS: ChurchEvent[] = [
   {
     id: 'event-5',
     title: 'Annual Covenant Prophetic Conference',
-    date: 'Fri, Sep 15, 2023',
+    date: 'Fri, Sep 15, 2025',
     time: '8:30 AM - 5:00 PM',
     location: 'Mumias Main Cathedral',
     category: 'Special',

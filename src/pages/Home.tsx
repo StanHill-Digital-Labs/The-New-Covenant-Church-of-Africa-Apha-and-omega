@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { EventDetailModal } from '../components/EventDetailModal';
 import { IMAGES, CHURCH_INFO, SERMONS, EVENTS } from '../data/churchData';
 import { Sermon } from '../types';
 
@@ -16,6 +17,8 @@ const [contactMsg, setContactMsg] = useState('');
 const [submittedMessage, setSubmittedMessage] = useState(false);
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitError, setSubmitError] = useState('');
+
+const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
@@ -326,17 +329,22 @@ const handleContactSubmit = async (e: React.FormEvent) => {
               </div>
 
               <div className="pt-6 mt-4 border-t border-[#c3c8c1]/40 flex items-center justify-between">
-                <Link
-                  to="/events"
-                  className="text-[#475749] font-label-sm text-xs font-bold hover:underline flex items-center gap-1"
-                >
+                <button
+		  onClick={() => setSelectedEvent(evt)}
+		  className="text-[#475749] font-label-sm text-xs font-bold hover:underline flex items-center gap-1 cursor-pointer"
+		>
                   <span>Event Details</span>
                   <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                </Link>
+                </button>
               </div>
             </div>
           ))}
         </div>
+        <EventDetailModal
+	  selectedEvent={selectedEvent}
+	  onClose={() => setSelectedEvent(null)}
+	  onOpenPrayerModal={onOpenPrayerModal} // pass this down from wherever the homepage receives it
+	/>
       </section>
 
       {/* Quick Church Info Banner */}
