@@ -141,3 +141,31 @@
 .animate-heartbeat:hover {
   animation-play-state: paused;
 }
+
+.logo-top-text {
+  font-size: 24px;
+}
+
+.logo-bottom-text {
+  font-size: 18px;
+}
+
+@media (min-width: 640px) {
+  .logo-top-text {
+    font-size: 30px;
+  }
+
+  .logo-bottom-text {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-top-text {
+    font-size: 38px;
+  }
+
+  .logo-bottom-text {
+    font-size: 30px;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CHURCH_INFO } from '../data/churchData';
+import Logo from '../assets/logo.svg';
 
 interface HeaderProps {
   onOpenSupportModal: () => void;
@@ -44,11 +45,14 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Brand */}
         <Link
           to="/"
-          className="font-headline-md text-[18px] md:text-[22px] text-[#475749] font-bold truncate max-w-[240px] sm:max-w-[360px] md:max-w-[480px] leading-snug hover:opacity-90 transition-opacity"
+          className="flex items-center gap-3 shrink-0"
           title={CHURCH_INFO.fullName}
         >
-          {/*{CHURCH_INFO.fullName} */}
-          LOGO
+          <img
+	    src={Logo}
+	    alt="The New Covenant Church of Africa - Alpha and Omega"
+	    className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
+	  />
         </Link>
 
         {/* Desktop Navigation Links */}

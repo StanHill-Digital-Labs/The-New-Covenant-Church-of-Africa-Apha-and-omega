@@ -306,7 +306,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
               </div>
 
               <a
-                href="/sermons"
+                href="#"
                 className="bg-[#f0eee8] text-[#475749] border border-[#c3c8c1] px-4 py-2.5 rounded-full font-label-sm text-xs hover:bg-[#475749] hover:text-white transition-colors inline-flex items-center justify-between w-full font-bold cursor-pointer"
               >
                 <span>Catch Latest Sermons</span>
