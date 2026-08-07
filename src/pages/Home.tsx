@@ -116,10 +116,15 @@ const handleContactSubmit = async (e: React.FormEvent) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 font-body-md text-[13px] sm:text-[14px] text-[#434843] truncate max-w-full">
-            <span className="material-symbols-outlined text-[20px] text-[#546251] shrink-0">location_on</span>
-            <span className="truncate">{CHURCH_INFO.address}</span>
-          </div>
+		<a href={`https://maps.google.com/?q=${encodeURIComponent(CHURCH_INFO.address)}`}
+		  target="_blank"
+		  rel="noopener noreferrer"
+		  className="flex items-center gap-2 font-label-sm text-[13px] sm:text-[14px] text-[#475749] font-bold hover:text-[#546251] transition-colors shrink-0"
+		>
+		  <span className="material-symbols-outlined text-[20px] text-[#546251]">location_on</span>
+		  <span>Get Directions</span>
+		  <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+		</a>
         </div>
       </div>
 
