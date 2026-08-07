@@ -290,7 +290,7 @@ export const EVENTS: ChurchEvent[] = [
     category: 'Worship',
     description: 'Join us for an uplifting morning of prophetic praise, powerful intercession, and divine revelatory teaching with Prophet Raphael Zedekiah.',
     isPast: false,
-    image: IMAGES.sermonPulpit
+    image: IMAGES.sermon1
   },
   {
     id: 'event-2',
@@ -301,7 +301,7 @@ export const EVENTS: ChurchEvent[] = [
     category: 'Prayer',
     description: 'A powerful midweek gathering focused on intercessory prayer, spiritual warfare, and breaking chains through the Word of God.',
     isPast: false,
-    image: IMAGES.sermonChapel
+    image: IMAGES.sermon2
   },
   {
     id: 'event-3',
@@ -323,7 +323,7 @@ export const EVENTS: ChurchEvent[] = [
     category: 'Outreach',
     description: 'A practical gospel witness serving over 300 families with food baskets, basic health screenings, and prayer support.',
     isPast: true,
-    image: IMAGES.sermonBible
+    image: IMAGES.sermon3
   },
   {
     id: 'event-5',
