@@ -1,0 +1,16 @@
+<svg width="600" height="90" viewBox="0 0 600 90" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="topArc" d="M 10,75 Q 300,15 590,75" fill="none" />
+  </defs>
+  <text
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="20"
+    font-weight="700"
+    fill="#475749"
+    letter-spacing="0.2"
+  >
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      THE NEW COVENANT CHURCH OF AFRICA
+    </textPath>
+  </text>
+</svg>

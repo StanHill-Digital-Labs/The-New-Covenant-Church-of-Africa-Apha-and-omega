@@ -1,0 +1,16 @@
+<svg width="600" height="90" viewBox="0 0 600 90" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="bottomArc" d="M 10,15 Q 300,75 590,15" fill="none" />
+  </defs>
+  <text
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="30"
+    font-weight="700"
+    fill="#475749"
+    letter-spacing="3"
+  >
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      ALPHA AND OMEGA
+    </textPath>
+  </text>
+</svg>

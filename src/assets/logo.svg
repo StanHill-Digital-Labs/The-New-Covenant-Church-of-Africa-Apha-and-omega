@@ -6,14 +6,12 @@
       d="M 25,126 A 170,140 0 0,1 335,126"
       fill="none"
     />
-
     <path
       id="bottomArc"
       d="M 25,194 A 170,140 0 0,0 335,194"
       fill="none"
     />
   </defs>
-
   <!-- Outer seal -->
   <ellipse
     cx="180"
@@ -24,7 +22,6 @@
     stroke="#c3c8c1"
     stroke-width="2"
   />
-
   <!-- Inner ring -->
   <ellipse
     cx="180"
@@ -35,18 +32,16 @@
     stroke="#c3c8c1"
     stroke-width="1"
   />
-
   <!-- Decorative separators -->
   <circle cx="18" cy="160" r="3.5" fill="#546251"/>
   <circle cx="342" cy="160" r="3.5" fill="#546251"/>
-
   <!-- Upper text -->
   <text
-    class="logo-top-text"
     font-family="'Playfair Display', Georgia, serif"
+    font-size="16"
     font-weight="700"
     fill="#475749"
-    letter-spacing="0.15"
+    letter-spacing="0.1"
   >
     <textPath
       href="#topArc"
@@ -56,14 +51,13 @@
       THE NEW COVENANT CHURCH OF AFRICA
     </textPath>
   </text>
-
   <!-- Lower text -->
   <text
-    class="logo-bottom-text"
     font-family="'Playfair Display', Georgia, serif"
+    font-size="19"
     font-weight="700"
     fill="#475749"
-    letter-spacing="2"
+    letter-spacing="2.5"
   >
     <textPath
       href="#bottomArc"
@@ -73,10 +67,8 @@
       ALPHA AND OMEGA
     </textPath>
   </text>
-
   <!-- Cathedral -->
   <g transform="translate(180,170) scale(1.12)">
-
     <!-- Ground -->
     <rect
       x="-58"
@@ -86,13 +78,11 @@
       rx="1"
       fill="#475749"
     />
-
     <!-- Left chapel -->
     <polygon
       points="-58,20 -44,-2 -30,20"
       fill="#546251"
     />
-
     <rect
       x="-52"
       y="20"
@@ -100,7 +90,6 @@
       height="32"
       fill="#5f6f60"
     />
-
     <rect
       x="-48"
       y="30"
@@ -109,13 +98,11 @@
       rx="2"
       fill="#d7e7d1"
     />
-
     <!-- Right chapel -->
     <polygon
       points="30,20 44,-2 58,20"
       fill="#546251"
     />
-
     <rect
       x="36"
       y="20"
@@ -123,7 +110,6 @@
       height="32"
       fill="#5f6f60"
     />
-
     <rect
       x="40"
       y="30"
@@ -132,7 +118,6 @@
       rx="2"
       fill="#d7e7d1"
     />
-
     <!-- Nave -->
     <rect
       x="-30"
@@ -141,7 +126,6 @@
       height="48"
       fill="#475749"
     />
-
     <!-- Tower -->
     <rect
       x="-16"
@@ -150,13 +134,11 @@
       height="46"
       fill="#475749"
     />
-
     <!-- Spire -->
     <polygon
       points="-16,-38 0,-84 16,-38"
       fill="#546251"
     />
-
     <!-- Cross -->
     <rect
       x="-1.5"
@@ -165,7 +147,6 @@
       height="16"
       fill="#475749"
     />
-
     <rect
       x="-6"
       y="-95"
@@ -173,13 +154,11 @@
       height="3"
       fill="#475749"
     />
-
     <!-- Tower window -->
     <path
       d="M -8,-14 a 8,8 0 0 1 16,0 v 14 h -16 z"
       fill="#d7e7d1"
     />
-
     <rect
       x="-1"
       y="-14"
@@ -188,13 +167,11 @@
       fill="#475749"
       opacity="0.45"
     />
-
     <!-- Main door -->
     <path
       d="M -8,52 v -18 a 8,8 0 0 1 16,0 v 18 z"
       fill="#fcf9f3"
     />
-
     <!-- Rose window -->
     <circle
       cx="0"
@@ -202,24 +179,20 @@
       r="7"
       fill="#d7e7d1"
     />
-
     <circle
       cx="0"
       cy="18"
       r="2"
       fill="#475749"
     />
-
     <!-- Side windows -->
     <path
       d="M -24,26 a 4,4 0 0 1 8,0 v 10 h -8 z"
       fill="#d7e7d1"
     />
-
     <path
       d="M 16,26 a 4,4 0 0 1 8,0 v 10 h -8 z"
       fill="#d7e7d1"
     />
-
   </g>
 </svg>

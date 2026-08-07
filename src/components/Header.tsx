@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CHURCH_INFO } from '../data/churchData';
 import Logo from '../assets/logo.svg';
+import TopText from '../assets/top-text.svg';
+import CathedralIcon from '../assets/cathedral-icon.svg';
+import BottomText from '../assets/bottom-text.svg';
 
 interface HeaderProps {
   onOpenSupportModal: () => void;
@@ -45,14 +48,19 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Brand */}
         <Link
           to="/"
-          className="flex items-center gap-3 shrink-0"
+          className="relative flex items-center gap-3 shrink-0 md:top-6"
           title={CHURCH_INFO.fullName}
         >
-          <img
+          {/*<img
 	    src={Logo}
 	    alt="The New Covenant Church of Africa - Alpha and Omega"
-	    className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
-	  />
+	    className="h- w-18 sm:h- sm:w-32 object-contain "
+	  />*/}
+	  <div className=" flex flex-col items-center border-1 border-red-300">
+		  <img src={TopText} alt="The New Covenant Church of Africa" className="w-64 sm:w-72" />
+		  <img src={CathedralIcon} alt="" className="w-16 sm:w-20 my-1" />
+		  <img src={BottomText} alt="Alpha and Omega" className="w-40 sm:w-48" />
+	  </div>
         </Link>
 
         {/* Desktop Navigation Links */}
