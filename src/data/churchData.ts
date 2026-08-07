@@ -323,7 +323,8 @@ export const EVENTS: ChurchEvent[] = [
     category: 'Outreach',
     description: 'A practical gospel witness serving over 300 families with food baskets, basic health screenings, and prayer support.',
     isPast: true,
-    image: IMAGES.sermon3
+    image: IMAGES.sermon3,
+    photos: [IMAGES.sermon3, IMAGES.communityMumias, IMAGES.sermon1]
   },
   {
     id: 'event-5',
@@ -334,6 +335,7 @@ export const EVENTS: ChurchEvent[] = [
     category: 'Special',
     description: 'A 3-day spiritual summit bringing together regional leaders and assemblies across Kenya for prayer and consecration.',
     isPast: true,
-    image: IMAGES.baobabHero
+    image: IMAGES.baobabHero,
+  photos: [IMAGES.baobabHero, IMAGES.sermon2, IMAGES.communityMumias, IMAGES.sermon1]
   }
 ];
