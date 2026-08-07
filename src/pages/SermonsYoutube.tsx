@@ -19,6 +19,7 @@ export const SermonsYoutube: React.FC<SermonsProps> = ({ onSelectSermon, onSelec
 console.log("hi there")
 console.log(featuredSermon.youtubeId);
 console.log(sideSermons.map(s => s.youtubeId));
+console.log('youtubeId:', featuredSermon?.youtubeId)
 
   const filteredLessons = LESSONS.filter(
     (lesson) => activeCategory === 'All' || lesson.category === activeCategory
