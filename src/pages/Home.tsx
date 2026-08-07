@@ -209,7 +209,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
                     Latest Sermon
                   </span>
                 </div>
-                <div className="md:col-span-7 p-8 sm:p-10 flex flex-col justify-between space-y-6">
+                <div className="md:col-span-7 p-8 pt-4 sm:p-10 flex flex-col justify-between space-y-6">
                   <div className="space-y-4">
                     <div className="flex flex-wrap items-center gap-3 text-xs text-[#546251] font-label-sm font-bold">
                       <span className="flex items-center gap-1">
