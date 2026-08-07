@@ -201,7 +201,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
               <div className="bg-[#fcf9f3] rounded-2xl border border-[#c3c8c1] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 grid grid-cols-1 md:grid-cols-12 gap-0">
                 <div className="md:col-span-5 relative min-h-[260px] md:min-h-[340px] bg-[#f0eee8]">
                   <img
-                    src={latest.image}
+                    src='https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg'
                     alt={latest.title}
                     className="w-full h-full object-cover"
                   />

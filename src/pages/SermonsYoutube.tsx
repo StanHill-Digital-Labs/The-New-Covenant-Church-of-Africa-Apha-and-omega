@@ -16,8 +16,6 @@ export const SermonsYoutube: React.FC<SermonsProps> = ({ onSelectSermon, onSelec
 
   const categories = ['All', 'Prophetic Insight', 'Bible Study', 'Community Focus'];
 
-const thumbnail =
-`https://youtube.com/{sermon.youtubeId}/maxresdefault.jpg`;
 console.log("hi there")
 console.log(featuredSermon.youtubeId);
 console.log(sideSermons.map(s => s.youtubeId));
@@ -63,7 +61,7 @@ console.log(sideSermons.map(s => s.youtubeId));
           >
             <div className="relative w-full aspect-[16/9] bg-[#e5e2dc] overflow-hidden">
               <img
-                src={`https://img.youtube.com/vi/${featuredSermon.youtubeId}/hqdefault.jpg`}
+                src={`https://i3.ytimg.com/vi/${featuredSermon.youtubeId}/hqdefault.jpg`}
                 alt={featuredSermon.title}
                 className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out"
               />
@@ -114,7 +112,7 @@ console.log(sideSermons.map(s => s.youtubeId));
               >
                 <div className="relative w-full h-36 bg-[#e5e2dc] overflow-hidden">
                   <img
-                    src={`https://img.youtube.com/vi/${sermon.youtubeId}/hqdefault.jpg`}
+                    src={`https://i3.ytimg.com/vi/${sermon.youtubeId}/hqdefault.jpg`}
                     alt={sermon.title}
                     className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out"
                   />

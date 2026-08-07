@@ -70,7 +70,6 @@ export const SERMONS: Sermon[] = [
     date: 'Oct 15, 2023',
     speaker: 'Prophet Raphael Zedekiah',
     description: "An in-depth exploration of navigating life's storms anchored by faith and the enduring promises found within the scriptures.",
-    image: IMAGES.sermonPulpit,
     youtubeId: 'iwcjcSEmw60',
     type: 'video',
     duration: '48 min',
