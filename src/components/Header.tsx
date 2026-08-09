@@ -56,10 +56,10 @@ export const Header: React.FC<HeaderProps> = ({
 	    alt="The New Covenant Church of Africa - Alpha and Omega"
 	    className="h- w-18 sm:h- sm:w-32 object-contain "
 	  />*/}
-	  <div className="relative md:top-[-28px] flex flex-col items-center border-1 border-red-300">
-		  <img src={TopText} alt="The New Covenant Church of Africa" className="absolute top-8 w-64 sm:w-72" />
-		  <img src={CathedralIcon} alt="" className="w-16 sm:w-20 my-1" />
-		  <img src={BottomText} alt="Alpha and Omega" className="absolute bottom-3 w-40 sm:w-48" />
+	  <div className="relative top-[-14px] md:top-[-38px] flex flex-col items-center">
+		 {/* <img src={TopText} alt="The New Covenant Church of Africa" className="absolute top-8 w-64 sm:w-72" />*/}
+		  <img src={CathedralIcon} alt="" className="w-24 md:w-28 my-1" />
+		  {/*<img src={BottomText} alt="Alpha and Omega" className="absolute bottom-3 w-40 sm:w-48" />*/}
 	  </div>
         </Link>
 
