@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Brand */}
         <Link
           to="/"
-          className="relative flex items-center gap-3 shrink-0 md:top-6"
+          className="relative flex items-center size-28 gap-3 shrink-0 md:top-6"
           title={CHURCH_INFO.fullName}
         >
           {/*<img
