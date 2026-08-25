@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+{/* import React, { useState } from 'react';
 import { CHURCH_INFO } from '../data/churchData';
 
 interface SupportModalProps {
@@ -52,7 +52,7 @@ export const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) =
             </div>
 
             <form onSubmit={handleDonate} className="space-y-5">
-              {/* Amount Selection */}
+              {/* Amount Selection 
               <div>
                 <label className="block text-xs font-bold text-[#1c1c18] uppercase tracking-wider mb-2">
                   Select Donation Amount (KSh)
@@ -91,7 +91,7 @@ export const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) =
                 </div>
               </div>
 
-              {/* Payment Method */}
+              {/* Payment Method 
               <div>
                 <label className="block text-xs font-bold text-[#1c1c18] uppercase tracking-wider mb-2">
                   Payment Option
@@ -124,7 +124,7 @@ export const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) =
                 </div>
               </div>
 
-              {/* Form Fields */}
+              {/* Form Fields *
               <div className="space-y-3">
                 <div>
                   <label className="block text-xs font-semibold text-[#1c1c18] mb-1">Full Name</label>
@@ -166,7 +166,7 @@ export const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) =
                 </div>
               </div>
 
-              {/* Manual Paybill Instructions */}
+              {/* Manual Paybill Instructions 
               <div className="p-3 bg-[#e8e2d3] rounded-lg text-xs text-[#1e1c12] space-y-1 border border-[#ccc6b8]">
                 <p className="font-bold">Direct Paybill Instructions:</p>
                 <p>1. Go to M-Pesa Menu &gt; Lipa na M-Pesa &gt; Paybill</p>
@@ -216,6 +216,154 @@ export const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) =
             </button>
           </div>
         )}
+      </div>
+    </div>
+  );
+};
+*/}
+
+import React, { useState } from 'react';
+import { CHURCH_INFO } from '../data/churchData';
+
+interface SupportModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) => {
+  const [copiedField, setCopiedField] = useState<string | null>(null);
+
+  if (!isOpen) return null;
+
+  const handleCopy = async (value: string, field: string) => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(value);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = value;
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        const success = document.execCommand("copy");
+        document.body.removeChild(textarea);
+        if (!success) throw new Error("Copy failed");
+      }
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-fadeIn">
+      <div className="relative w-full max-w-lg bg-[#fcf9f3] rounded-2xl shadow-2xl border border-[#c3c8c1] p-6 sm:p-8 overflow-hidden max-h-[90vh] overflow-y-auto">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-[#747872] hover:text-[#1c1c18] p-2 rounded-full hover:bg-[#e5e2dc] transition-colors cursor-pointer"
+        >
+          <span className="material-symbols-outlined">close</span>
+        </button>
+
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#d7e7d1] text-[#546251] mb-3">
+            <span className="material-symbols-outlined text-2xl">volunteer_activism</span>
+          </div>
+          <h3 className="font-headline-lg text-[26px] text-[#475749]">Support Our Mission</h3>
+          <p className="font-body-md text-sm text-[#434843] mt-1">
+            Your tithes and offerings help spread God's Word, provide community shelter, food relief, and medical aid in Mumias.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {/* Paybill Option */}
+          <div className="bg-[#f0eee8] border border-[#c3c8c1] rounded-xl p-5 space-y-3">
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-[20px] text-[#546251]">account_balance</span>
+              <h4 className="font-label-sm text-sm text-[#1c1c18] font-bold uppercase tracking-wide">
+                M-Pesa Paybill
+              </h4>
+            </div>
+
+            <div className="flex items-center justify-between bg-white border border-[#c3c8c1] rounded-lg px-4 py-3">
+              <div>
+                <p className="text-[11px] text-[#747872] font-body-md uppercase tracking-wide">Paybill No.</p>
+                <p className="text-[#1c1c18] font-bold text-base">222111</p>
+              </div>
+              <button
+                onClick={() => handleCopy('222111', 'paybill')}
+                className="text-[#546251] hover:text-[#1c1c18] p-2 rounded-full hover:bg-[#e5e2dc] transition-colors cursor-pointer"
+              >
+                <span className="material-symbols-outlined text-[20px]">
+                  {copiedField === 'paybill' ? 'check' : 'content_copy'}
+                </span>
+              </button>
+            </div>
+
+            <div className="flex items-center justify-between bg-white border border-[#c3c8c1] rounded-lg px-4 py-3">
+              <div>
+                <p className="text-[11px] text-[#747872] font-body-md uppercase tracking-wide">Account No.</p>
+                <p className="text-[#1c1c18] font-bold text-base">081000022814</p>
+              </div>
+              <button
+                onClick={() => handleCopy('081000022814', 'account')}
+                className="text-[#546251] hover:text-[#1c1c18] p-2 rounded-full hover:bg-[#e5e2dc] transition-colors cursor-pointer"
+              >
+                <span className="material-symbols-outlined text-[20px]">
+                  {copiedField === 'account' ? 'check' : 'content_copy'}
+                </span>
+              </button>
+            </div>
+          </div>
+
+          {/* Send Money Option */}
+          <div className="bg-[#f0eee8] border border-[#c3c8c1] rounded-xl p-5 space-y-3">
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-[20px] text-[#546251]">phone_iphone</span>
+              <h4 className="font-label-sm text-sm text-[#1c1c18] font-bold uppercase tracking-wide">
+                M-Pesa Send Money
+              </h4>
+            </div>
+
+            <div className="flex items-center justify-between bg-white border border-[#c3c8c1] rounded-lg px-4 py-3">
+              <div>
+                <p className="text-[11px] text-[#747872] font-body-md uppercase tracking-wide">M-Pesa No.</p>
+                <p className="text-[#1c1c18] font-bold text-base">0723 130 292</p>
+              </div>
+              <button
+                onClick={() => handleCopy('0723130292', 'sendmoney')}
+                className="text-[#546251] hover:text-[#1c1c18] p-2 rounded-full hover:bg-[#e5e2dc] transition-colors cursor-pointer"
+              >
+                <span className="material-symbols-outlined text-[20px]">
+                  {copiedField === 'sendmoney' ? 'check' : 'content_copy'}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-xs text-center text-[#747872] font-body-md mt-6">
+          For any assistance with your offering, please contact our church office at{' '}
+          <a href={`tel:${CHURCH_INFO.phone}`} className="text-[#546251] font-bold hover:underline">
+            {CHURCH_INFO.phone}
+          </a>
+          /
+          <a href={`tel:${CHURCH_INFO.phone2}`} className="text-[#546251] font-bold hover:underline">
+            {CHURCH_INFO.phone2}
+          </a>
+        </p>
+
+        <div className="text-center mt-6">
+          <button
+            onClick={onClose}
+            className="bg-[#475749] text-white px-8 py-2.5 rounded-full font-label-sm text-sm hover:bg-[#5f6f60] transition-colors cursor-pointer"
+          >
+            Close Window
+          </button>
+        </div>
       </div>
     </div>
   );
