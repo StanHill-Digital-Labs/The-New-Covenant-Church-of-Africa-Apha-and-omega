@@ -104,32 +104,27 @@ const handleContactSubmit = async (e: React.FormEvent) => {
         </div>
       </section>
       
-      {/* 2. Compact Service Times / Address Bar */}
-      <div className="bg-[#f0eee8] border-y border-[#c3c8c1]/60 py-4 px-6 shadow-xs">
-        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-[#434843]">
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2 font-label-sm text-[13px] sm:text-[14px]">
-            <div className="flex items-center gap-2 text-[#475749] font-bold">
-              <span className="material-symbols-outlined text-[20px] text-[#546251]">schedule</span>
-              <span>Sunday Worship: 9:00 AM</span>
-            </div>
-            <span className="hidden sm:inline text-[#c3c8c1]">•</span>
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[20px] text-[#546251]">event</span>
-              <span>Wednesday Prayer: 5:00 PM</span>
-            </div>
-          </div>
-
-		<a href={`https://maps.google.com/?q=${encodeURIComponent(CHURCH_INFO.address)}`}
-		  target="_blank"
-		  rel="noopener noreferrer"
-		  className="flex items-center gap-2 font-label-sm text-[13px] sm:text-[14px] text-[#475749] font-bold hover:text-[#546251] transition-colors shrink-0"
-		>
-		  <span className="material-symbols-outlined text-[20px] text-[#546251]">location_on</span>
-		  <span>Get Directions</span>
-		  <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-		</a>
-        </div>
-      </div>
+      {/* 2. Compact Service Times Bar */}
+	<div className="bg-[#f0eee8] border-y border-[#c3c8c1]/60 py-4 px-6 shadow-xs">
+	  <div className="max-w-[1200px] mx-auto flex justify-center">
+	    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-label-sm text-[13px] sm:text-[14px] text-[#434843]">
+	      <div className="flex items-center gap-2 text-[#475749] font-bold">
+		<span className="material-symbols-outlined text-[20px] text-[#546251]">schedule</span>
+		<span>Sunday: 9:00 AM – 1:00 PM</span>
+	      </div>
+	      <span className="hidden sm:inline text-[#c3c8c1]">•</span>
+	      <div className="flex items-center gap-2">
+		<span className="material-symbols-outlined text-[20px] text-[#546251]">event</span>
+		<span>Wednesday: 10:00 AM – 11:00 AM</span>
+	      </div>
+	      <span className="hidden sm:inline text-[#c3c8c1]">•</span>
+	      <div className="flex items-center gap-2">
+		<span className="material-symbols-outlined text-[20px] text-[#546251]">event</span>
+		<span>Friday: 10:00 AM – 12:00 PM</span>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
       {/* Vision & Mission Block (Bento Grid Style) */}
       <section className="max-w-[1200px] mx-auto px-6 py-20">
