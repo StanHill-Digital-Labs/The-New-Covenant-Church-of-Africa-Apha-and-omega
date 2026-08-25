@@ -6,9 +6,9 @@ export const CHURCH_INFO = {
   address: 'Address 30, Mirere Sub Location, Matungu Subcounty, Mumias, Kenya',
   phone: '0758306011',
   phone2: '0710156516',
-  email: 'office@newcovenantafrica.org',
-  mPesaPaybill: '522522',
-  mPesaAccount: 'COVENANT',
+  email: 'newcovenantchurchalphaandomega@gmail.com',
+  mPesaPaybill: '222111',
+  mPesaAccount: '081000022814',
   copyrightYear: 2024,
   motto: 'Transforming lives and society through prophecy and spiritual nurturing.'
 };
@@ -339,4 +339,18 @@ export const EVENTS: ChurchEvent[] = [
     image: IMAGES.baobabHero,
   photos: [IMAGES.baobabHero, IMAGES.sermon2, IMAGES.communityMumias, IMAGES.sermon1]
   }
+];
+
+
+export const IMPACT_STORIES = [
+  {
+    id: 'story-1',
+    title: 'A Home Built in Faith',
+    punchline: 'From a leaking shelter to a home of her own.',
+    image: IMAGES.baobabHero, // replace with your actual uploaded image key
+    story:
+      "For years, [Name] and her [children/family] lived in a one-room structure that could barely keep out the rain. When our church learned of her situation, our congregation came together — through offerings, labor, and prayer — to build her a proper home. Today, that same ground holds walls that stand firm and a roof that keeps her family dry, a small but lasting sign of God's provision through His people.",
+    quote: "I never thought I would own a home like this. God used His church to answer a prayer I had almost stopped praying.",
+    quotePerson: '[Name], recipient of the new home', // update with real name once consent confirmed
+  },
 ];

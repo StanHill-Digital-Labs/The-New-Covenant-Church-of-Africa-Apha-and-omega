@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { EventDetailModal } from '../components/EventDetailModal';
+import { ImpactStorySection } from '../components/ImpactStorySection.tsx';
 import { IMAGES, CHURCH_INFO, SERMONS, EVENTS } from '../data/churchData';
 import { Sermon } from '../types';
 
@@ -173,6 +174,8 @@ const handleContactSubmit = async (e: React.FormEvent) => {
           </div>
         </div>
       </section>
+      
+      <ImpactStorySection />
       
       {/* 4. Latest Message Section */}
       <section className="bg-[#f6f3ed] py-20 border-y border-[#c3c8c1]/40">
