@@ -346,11 +346,11 @@ export const IMPACT_STORIES = [
   {
     id: 'story-1',
     title: 'A Home Built in Faith',
-    punchline: 'From a leaking shelter to a home of her own.',
-    image: IMAGES.baobabHero, // replace with your actual uploaded image key
+    punchline: 'From a leaking shelter to a home of his own.',
+    image: IMAGES.baobabHero,
     story:
-      "For years, [Name] and her [children/family] lived in a one-room structure that could barely keep out the rain. When our church learned of her situation, our congregation came together — through offerings, labor, and prayer — to build her a proper home. Today, that same ground holds walls that stand firm and a roof that keeps her family dry, a small but lasting sign of God's provision through His people.",
+      "For years, [Name] and his family lived in a one-room structure that could barely keep out the rain. When our church learned of his situation, our congregation came together, through offerings, labor, and prayer, to build him a proper home. Today, that same ground holds walls that stand firm and a roof that keeps his family dry, a small but lasting sign of God's provision through His people.",
     quote: "I never thought I would own a home like this. God used His church to answer a prayer I had almost stopped praying.",
-    quotePerson: '[Name], recipient of the new home', // update with real name once consent confirmed
+    quotePerson: '[Name], recipient of the new home',
   },
 ];
