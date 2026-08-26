@@ -124,7 +124,7 @@ export const Footer: React.FC<FooterProps> = ({
 
               {/* Facebook */}
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/groups/2023341774824890/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-full bg-white border border-[#c3c8c1] flex items-center justify-center hover:bg-[#475749] hover:text-white transition-all"
