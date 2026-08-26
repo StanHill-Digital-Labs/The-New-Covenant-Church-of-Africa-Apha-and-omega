@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({
 
               <a
                 href={`mailto:${CHURCH_INFO.email}`}
-                className="flex items-center gap-2 hover:text-[#475749] transition-colors"
+                className="flex items-center gap-2 hover:text-[#475749] transition-colors break-all"
               >
                 <span className="material-symbols-outlined text-[18px]">
                   mail

@@ -129,7 +129,7 @@ const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
                 <input
                   type="text"
                   required
-                  placeholder="e.g. +254 712 345 678 or email"
+                  placeholder="e.g. 0712 345 678 or email"
                   value={contact}
                   onChange={(e) => setContact(e.target.value)}
                   className="w-full bg-[#ffffff] border border-[#c3c8c1] rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#546251] focus:outline-none"

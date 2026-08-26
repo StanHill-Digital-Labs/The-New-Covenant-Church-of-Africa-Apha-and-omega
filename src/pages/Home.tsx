@@ -408,7 +408,7 @@ const handleContactSubmit = async (e: React.FormEvent) => {
                   <span className="material-symbols-outlined text-[#546251] mt-1 text-2xl">mail</span>
                   <div>
                     <p className="font-label-sm text-sm text-[#121f11] font-bold">Email</p>
-                    <a href={`mailto:${CHURCH_INFO.email}`} className="font-body-md text-sm text-[#3d4a3a] hover:underline">
+                    <a href={`mailto:${CHURCH_INFO.email}`} className="font-body-md text-sm text-[#3d4a3a] hover:underline break-all">
                       {CHURCH_INFO.email}
                     </a>
                   </div>
