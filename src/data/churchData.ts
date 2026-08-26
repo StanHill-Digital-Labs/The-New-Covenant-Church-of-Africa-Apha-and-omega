@@ -217,29 +217,65 @@ By providing basic medical outreach and clean water support, we demonstrate that
 
 export const BRANCHES: Branch[] = [
   {
-    name: 'Mumias Main Cathedral',
+    name: 'Okoa Mirere Mumias H/Q',
     location: 'Address 30, Mirere Sub Location, Matungu Subcounty, Mumias',
-    leader: 'Prophet Raphael Zedekiah & Linus Wanyama',
-    phone: '+254 712 345 678'
+    leader: 'Prophet Raphael Zedekiah',
+    phone: '0723130292'
   },
   {
-    name: 'Kakamega Town Assembly',
+    name: 'Uthiru Church',
     location: 'Kakamega Central, near High Court Road',
-    leader: 'Pastor Samuel Ochieng',
-    phone: '+254 723 456 789'
+    leader: 'Linus Wanyama',
+    phone: '0729382003'
   },
   {
-    name: 'Bungoma Fellowship Center',
+    name: 'Imakale Mumias ',
     location: 'Kanduyi Highway Junction, Bungoma',
     leader: 'Evangelist Mary Barasa',
     phone: '+254 734 567 890'
   },
   {
-    name: 'Nairobi Outreach Mission',
+    name: 'Muriola Soy',
     location: 'Upper Hill Christian Center, Nairobi',
     leader: 'Elder David Wafula',
     phone: '+254 701 234 567'
-  }
+  },
+  {
+    name: 'Murram mwamba',
+    location: 'Upper Hill Christian Center, Nairobi',
+    leader: 'Elder David Wafula',
+    phone: '+254 701 234 567'
+  },
+  {
+    name: 'Emutete, Bunyore',
+    location: 'Upper Hill Christian Center, Nairobi',
+    leader: 'Elder David Wafula',
+    phone: '+254 701 234 567'
+  },
+  {
+    name: 'Nyanganera Maabera Migori ',
+    location: 'Upper Hill Christian Center, Nairobi',
+    leader: 'Elder David Wafula',
+    phone: '+254 701 234 567'
+  },
+  {
+    name: 'Emulobi, Bunyore Vihiga',
+    location: 'Upper Hill Christian Center, Nairobi',
+    leader: 'Elder David Wafula',
+    phone: '+254 701 234 567'
+  },
+  {
+    name: 'Munyaka Eldoret',
+    location: 'Upper Hill Christian Center, Nairobi',
+    leader: 'Elder David Wafula',
+    phone: '+254 701 234 567'
+  },
+  {
+    name: 'Rungiiri Nairobi',
+    location: 'Upper Hill Christian Center, Nairobi',
+    leader: 'Elder David Wafula',
+    phone: '+254 701 234 567'
+  },
 ];
 
 export const BELIEFS = [
