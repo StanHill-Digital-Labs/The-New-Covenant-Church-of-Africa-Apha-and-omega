@@ -6,3 +6,5 @@ coverage/
 *.log
 .env*
 !.env.example
+src/assets/webassets/Details.docx
+src/assets/webassets/.~lock.Details.docx#
