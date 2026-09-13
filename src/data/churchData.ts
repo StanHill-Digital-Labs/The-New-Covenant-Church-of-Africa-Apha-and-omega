@@ -327,7 +327,7 @@ export const EVENTS: ChurchEvent[] = [
     category: 'Outreach',
     description: 'Join us for an uplifting morning of prophetic praise, powerful intercession, and divine revelatory teaching with Prophet Raphael Zedekiah.',
     isPast: true,
-    image: IMAGES.sermon3,
+    image: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/mirere.png',
     photos: [IMAGES.sermon3, IMAGES.communityMumias, IMAGES.sermon1]
   },
   {/*
