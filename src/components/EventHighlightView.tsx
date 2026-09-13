@@ -25,6 +25,7 @@ export const EventHighlightView: React.FC<EventHighlightViewProps> = ({
   if (!selectedEvent) return null;
 
   const hasPhotos = selectedEvent.photos && selectedEvent.photos.length > 0;
+  const hasVideos = selectedEvent.videos && selectedEvent.videos.length > 0;
 
   return (
     <div className="fixed inset-0 z-50 bg-[#fcf9f3] overflow-y-auto animate-fadeIn">
@@ -121,7 +122,7 @@ export const EventHighlightView: React.FC<EventHighlightViewProps> = ({
               }}
               className="text-[#546251] font-label-sm text-sm font-bold hover:underline cursor-pointer inline-flex items-center gap-1.5"
             >
-              <span>Inquire / Contact Office</span>
+              <span>Send a prayer request</span>
               <span className="material-symbols-outlined text-[16px]">chevron_right</span>
             </button>
           </div>

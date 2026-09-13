@@ -325,10 +325,11 @@ export const EVENTS: ChurchEvent[] = [
     time: '10:00 AM - 4:00 PM',
     location: 'Mirere center',
     category: 'Outreach',
-    description: 'Join us for an uplifting morning of prophetic praise, powerful intercession, and divine revelatory teaching with Prophet Raphael Zedekiah.',
+    description: 'Join us for an uplifting session of prophetic praise, powerful intercession, and divine revelatory teaching with Prophet Raphael Zedekiah.',
     isPast: true,
     image: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/mirere.png',
-    photos: [IMAGES.sermon3, IMAGES.communityMumias, IMAGES.sermon1]
+    photos: [IMAGES.sermon3, IMAGES.communityMumias, IMAGES.sermon1],
+    videos: ['https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda-107_H2bZyhmr.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_100.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_101.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_102.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_103.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_104.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_105.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_106.mp4']
   },
   ];
   {/**

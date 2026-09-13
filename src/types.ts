@@ -51,4 +51,5 @@ export interface ChurchEvent {
   isPast?: boolean;
   image?: string;
   photos?: string[];
+  videos?: string[];
 }
