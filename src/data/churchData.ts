@@ -16,16 +16,16 @@ export const FOUNDING_YEAR = 2018;
 
 export const IMAGES = {
   heroBg: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtYE98OENi4N2IDppn5V-NBeE-ZO-qD7a4Liv1bwgJVwyOoa9jpr8k08y0XVCu1AnyGXNrcKP2tXVfs_2y3anYgBtRo6xdTCtVQRBASylfIvYwtpSl1y2xnf-lFg9TKpIAcfq5B2fg6kJPDjQXelgPzN4rzkrsW1VJ4HNThWvmTj30oK5QQ03nbDW2A-vkAJqit9CZeFLZI5ccg0gd7qjaWx7bqAOZB8B-RdW36zlO8pGKH3Ajr5PE',
-  communityMumias: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAl6sPAxEra1TQu1zn1TipVRqKO-3VpUT7CU2HLyG1Tit-F1wNKXQ0ZlQ1qupOAI7yt_6RFBBc3wb_qZpe2AYJ-YBvz-EVgCFAbEM7aQCLLVbTD6CSBL_NO-79VNgc_X27FrRA_WI8vRyqxdXfLrcLHPTkN2caQtPQzQ2GyLaiBAgkrJS75IYwfomS6U1jzIlDNV901etq40tDAl6ISiLhjmqcMhs7Z6HxP2h-UOTOi9OQTJWAntdME',
-  baobabHero: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBIzEDZyUgzyFW-MWpy2PtocYs9qf3FJkwD-qLrMfFxPYB6zjT4fq3gshNbPsU3Jj3fSrIbOAWU_SUxJ4umx7xpw-f0zWPyET68pD7JcS6aFCWmHBvok7tuJ401qyc1NsbllTZwCoPV7NcK73-CFXbDFAecvh_ccUsgkktz2ZlCwD4nnpwLav67bv1vSI-2xWBr2E_dQOCFjJI_lUX2Ml1MEBApS9H0FSJqVMGZMcMOgx6EAySDUC0p',
+  communityMumias: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/group_2.jpeg',
+  founder_about: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/founder_8.jpeg',
   sermon1: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   sermon2: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   sermon3: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   sermon4: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   leaders: {
-    prophet: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDXuJgMeI0Ks9wGQzWFYijADCEzDNTFeaFMOBgBFmqD7rnLRABFB1wVMO0sFusYV5tuhodc8Ut8SVBVOQhE_71oTayaRHWZVSr3R_8ScjtU7OW89OuP3KlC_gO18SfN2XHzzxK4mcWbjo94VlntzwekkOajnxkYWLf1W6v6isp0DtWa7o6oa-ZIZm-3_Gqhl72EFyBx0kRPWBOff2ZgBmeYXKKoCymWwKtkm9isOrvddCCItkfDOeeU',
-    chairperson: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB6yLeUu-TYdGxJUDjcTALChZMOJvhhy6MHkWM0nDZn0MbnNhQvI5TCqdiiALeCXBJXE5Ifyy4dypdl_b2gjy0dBamsU2RMJQeUFBJwL9JT9_FR_cDBypHkjS5mxjtEuaX1s3fjuSXu1_Ao456jjZ3VrHI38_Seq0ekoVGDDtFqmBPXONlT-HeZunaMuRlfHuF4dV62lR1WVT_5SekMe85CV8ixoQotV7PKMasLGGNDj01vT0N_8yl3',
-    secretary: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBDfeircT5xiQSAubzUptS1udVpCyY8b_Ilc_2WGf0QMbgnNXwxbcyBXlH93y6pRANCqDN-GNOZBb6yiyUIem9GZtwTeNGWxSrIRRNoFoqWs8LQnMk4jb44vvlnuDoZGQAGSFT5koWbmnBPnRAVxPBbglp2T38Ed9HskiRnDs3tNf5a0S_TenYOKHIMMPl6EW9IxRMHywboMPIpSk4UQxDZaY5Mskuyq3Z-XsunlfEBzg3VLXVyDt0H',
+    founder: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/founder_6.jpeg',
+    chairperson: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/chairman.jpeg',
+    secretary_general: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/GS.jpeg',
     treasurer: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBL8YE7kH6q7eKz0Pu-NMXSY5PiaJ6WdyK1vlJOcuprRge88OHul06X9LTq9CCX94QeQ6NQe04ObBuq0-qiM0fDjnZ-R2Sve5luPJ_Ri9aYcCQ7auTdnW19QsYLPW6pR_HJ8-fn712_t6ee6BxLK34cBhN28WaN4ZPWhhWf30HWxwf63Ezi0ZqpvsnBgUMJRu_poKjjuiCLQZHsKMs8WzvhUBsQh_p65dQkbxXRu3oy5aSr2fPFHwS0'
   }
 };
@@ -35,7 +35,7 @@ export const LEADERS: Leader[] = [
     id: 'prophet-raphael',
     name: 'Prophet Raphael Zedekiah',
     role: 'FOUNDER',
-    image: IMAGES.leaders.prophet,
+    image: IMAGES.leaders.founder,
     bio: 'Guided by divine revelation, Prophet Raphael Zedekiah established The New Covenant Church of Africa Alpha and Omega to spread prophetic truth, restore spiritual dignity, and foster holistic community growth across Mumias and beyond.',
     scriptureQuote: '"Before I formed you in the womb I knew you, before you were born I set you apart; I appointed you as a prophet to the nations." — Jeremiah 1:5'
   },
@@ -51,7 +51,7 @@ export const LEADERS: Leader[] = [
     id: 'daniel-muhuyi',
     name: 'Daniel Muhuyi Chemiati',
     role: 'GENERAL SECRETARY',
-    image: IMAGES.leaders.secretary,
+    image: IMAGES.leaders.secretary_general,
     bio: 'Overseeing church communications, documentation, and operational organization, Elder Daniel ensures seamless coordination between leadership, congregants, and regional branches.',
     scriptureQuote: '"Let all things be done decently and in order." — 1 Corinthians 14:40'
   },
@@ -383,7 +383,7 @@ export const IMPACT_STORIES = [
     id: 'story-1',
     title: 'A Home Built in Faith',
     punchline: 'From a leaking shelter to a home of his own.',
-    image: IMAGES.baobabHero,
+    image: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/charity_1.jpeg',
     story:
       "For years, [Name] and his family lived in a one-room structure that could barely keep out the rain. When our church learned of his situation, our congregation came together, through offerings, labor, and prayer, to build him a proper home. Today, that same ground holds walls that stand firm and a roof that keeps his family dry, a small but lasting sign of God's provision through His people.",
     quote: "I never thought I would own a home like this. God used His church to answer a prayer I had almost stopped praying.",

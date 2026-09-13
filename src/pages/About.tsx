@@ -34,7 +34,7 @@ export const About: React.FC<AboutProps> = ({ onOpenPrayerModal }) => {
 
           <div className="md:col-span-6 rounded-2xl overflow-hidden border border-[#c3c8c1] bg-[#f0eee8] h-[380px] md:h-[420px] shadow-md">
             <img
-              src={IMAGES.baobabHero}
+              src={IMAGES.founder_about}
               alt="Majestic Baobab Tree at Sunrise"
               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
             />
