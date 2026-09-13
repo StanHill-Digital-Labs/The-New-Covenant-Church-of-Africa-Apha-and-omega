@@ -47,7 +47,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
         {/* Filter Tab Bar */}
         <div className="flex justify-center mb-12">
           <div className="bg-[#f0eee8] p-1.5 rounded-full border border-[#c3c8c1] flex items-center gap-1 shadow-xs">
-            {(['Upcoming', 'Past', 'All'] as const).map((tab) => (
+            {(['All', 'Upcoming', 'Past'] as const).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setFilter(tab)}

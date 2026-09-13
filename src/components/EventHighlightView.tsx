@@ -106,11 +106,57 @@ export const EventHighlightView: React.FC<EventHighlightViewProps> = ({
                 image
               </span>
               <p className="text-sm text-[#747872] font-body-md">
-                Photos from this event haven't been added yet.
+                No photos have been added.
               </p>
             </div>
           )}
         </div>
+        
+        {/* Video highlights */}
+	<div className="space-y-4">
+	  <h2 className="font-headline-md text-[22px] text-[#475749] font-bold flex items-center gap-2">
+	    <span className="material-symbols-outlined text-[24px] text-[#546251]">
+	      videocam
+	    </span>
+	    Event Videos
+	  </h2>
+
+	  {hasVideos ? (
+	    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+	      {selectedEvent.videos!.map((video, idx) => (
+		<div
+		  key={idx}
+		  className="rounded-xl overflow-hidden border border-[#c3c8c1] bg-[#e5e2dc]"
+		>
+		  <video
+		    controls
+		    preload="metadata"
+		    className="w-full aspect-video object-cover"
+		  >
+		    <source src={video} type="video/mp4" />
+		    Your browser does not support the video tag.
+		  </video>
+
+		  <div className="px-4 py-3 bg-[#f0eee8]">
+		    <p className="text-sm text-[#434843] font-body-md">
+		      {selectedEvent.title} — Video {idx + 1}
+		    </p>
+		  </div>
+		</div>
+	      ))}
+	    </div>
+	  ) : (
+	    <div className="bg-[#f0eee8] border border-dashed border-[#c3c8c1] rounded-xl p-10 text-center">
+	      <span className="material-symbols-outlined text-4xl text-[#a8ada5] mb-3 block">
+		videocam_off
+	      </span>
+
+	      <p className="text-sm text-[#747872] font-body-md">
+		Videos from this event haven't been added yet.
+	      </p>
+	    </div>
+	  )}
+	</div>
 
         {/* Footer action */}
         {onOpenPrayerModal && (
