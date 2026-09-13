@@ -9,7 +9,7 @@ interface EventsProps {
 }
 
 export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
-  const [filter, setFilter] = useState<'All' | 'Upcoming' | 'Past'>('Upcoming');
+  const [filter, setFilter] = useState<'All' | 'Upcoming' | 'Past'>('All');
   const [selectedEvent, setSelectedEvent] = useState<ChurchEvent | null>(null);
 
   const filteredEvents = EVENTS.filter((evt) => {
@@ -47,7 +47,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
         {/* Filter Tab Bar */}
         <div className="flex justify-center mb-12">
           <div className="bg-[#f0eee8] p-1.5 rounded-full border border-[#c3c8c1] flex items-center gap-1 shadow-xs">
-            {(['All', 'Upcoming', 'Past'] as const).map((tab) => (
+            {(['Upcoming', 'Past', 'All'] as const).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setFilter(tab)}
@@ -150,7 +150,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
             <span className="material-symbols-outlined text-5xl text-[#747872]">event_busy</span>
             <h3 className="font-headline-md text-xl text-[#475749]">No {filter} Events Found</h3>
             <p className="font-body-md text-sm text-[#434843]">
-              There are currently no events matching this category. Please check back soon or switch filters.
+              There are currently no new events. Please check back soon.
             </p>
             <button
               onClick={() => setFilter('All')}

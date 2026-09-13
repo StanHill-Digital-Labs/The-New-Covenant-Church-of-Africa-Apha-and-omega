@@ -139,7 +139,7 @@ export const EventHighlightView: React.FC<EventHighlightViewProps> = ({
 
 		  <div className="px-4 py-3 bg-[#f0eee8]">
 		    <p className="text-sm text-[#434843] font-body-md">
-		      {selectedEvent.title} — Video {idx + 1}
+		      {/*{selectedEvent.title} — Video {idx + 1}*/}
 		    </p>
 		  </div>
 		</div>
