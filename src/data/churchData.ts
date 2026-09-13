@@ -330,7 +330,8 @@ export const EVENTS: ChurchEvent[] = [
     image: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/mirere.png',
     photos: [IMAGES.sermon3, IMAGES.communityMumias, IMAGES.sermon1]
   },
-  {/*
+  ];
+  {/**
   {
     id: 'event-2',
     title: 'Sunday Victory & Prophetic Worship Service',
@@ -365,7 +366,7 @@ export const EVENTS: ChurchEvent[] = [
     image: IMAGES.communityMumias
   },
 */}
-];
+
 
 
 export const IMPACT_STORIES = [
