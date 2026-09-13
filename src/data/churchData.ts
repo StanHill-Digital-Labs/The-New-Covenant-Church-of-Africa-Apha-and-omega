@@ -320,6 +320,19 @@ export const BELIEFS = [
 export const EVENTS: ChurchEvent[] = [
   {
     id: 'event-1',
+    title: 'Mirere Seminar',
+    date: 'Aug 08, 2026',
+    time: '10:00 AM - 4:00 PM',
+    location: 'Mirere center',
+    category: 'Outreach',
+    description: 'Join us for an uplifting morning of prophetic praise, powerful intercession, and divine revelatory teaching with Prophet Raphael Zedekiah.',
+    isPast: true,
+    image: IMAGES.sermon3,
+    photos: [IMAGES.sermon3, IMAGES.communityMumias, IMAGES.sermon1]
+  },
+  {/*
+  {
+    id: 'event-2',
     title: 'Sunday Victory & Prophetic Worship Service',
     date: 'Sun, Nov 12, 2026',
     time: '9:00 AM - 12:30 PM',
@@ -330,7 +343,7 @@ export const EVENTS: ChurchEvent[] = [
     image: IMAGES.sermon1
   },
   {
-    id: 'event-2',
+    id: 'event-3',
     title: 'Weekly Prayer & Deliverance Night',
     date: 'Wed, Nov 15, 2026',
     time: '5:00 PM - 7:00 PM',
@@ -341,7 +354,7 @@ export const EVENTS: ChurchEvent[] = [
     image: IMAGES.sermon2
   },
   {
-    id: 'event-3',
+    id: 'event-4',
     title: 'Youth & Young Adults Fellowship',
     date: 'Sat, Nov 18, 2026',
     time: '2:00 PM - 5:00 PM',
@@ -351,30 +364,7 @@ export const EVENTS: ChurchEvent[] = [
     isPast: false,
     image: IMAGES.communityMumias
   },
-  {
-    id: 'event-4',
-    title: 'Matungu Community Food & Medical Outreach',
-    date: 'Sat, Oct 28, 2025',
-    time: '10:00 AM - 4:00 PM',
-    location: 'Mirere Sub Location Grounds',
-    category: 'Outreach',
-    description: 'A practical gospel witness serving over 300 families with food baskets, basic health screenings, and prayer support.',
-    isPast: true,
-    image: IMAGES.sermon3,
-    photos: [IMAGES.sermon3, IMAGES.communityMumias, IMAGES.sermon1]
-  },
-  {
-    id: 'event-5',
-    title: 'Annual Covenant Prophetic Conference',
-    date: 'Fri, Sep 15, 2025',
-    time: '8:30 AM - 5:00 PM',
-    location: 'Mumias Main Cathedral',
-    category: 'Special',
-    description: 'A 3-day spiritual summit bringing together regional leaders and assemblies across Kenya for prayer and consecration.',
-    isPast: true,
-    image: IMAGES.baobabHero,
-  photos: [IMAGES.baobabHero, IMAGES.sermon2, IMAGES.communityMumias, IMAGES.sermon1]
-  }
+*/}
 ];
 
 
