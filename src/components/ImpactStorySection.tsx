@@ -20,7 +20,7 @@ export const ImpactStorySection: React.FC = () => {
 
       <div className="bg-[#f0eee8] rounded-3xl overflow-hidden border border-[#c3c8c1] flex flex-col md:flex-row shadow-sm">
         {/* Image */}
-        <div className="w-full md:w-1/2 h-[] md:h-auto md:min-h-[] bg-[#e5e2dc]">
+        <div className="w-full md:w-1/2 h-[auto]  md:min-h-[] bg-[#e5e2dc]">
           <img
             src={story.image}
             alt={story.title}
