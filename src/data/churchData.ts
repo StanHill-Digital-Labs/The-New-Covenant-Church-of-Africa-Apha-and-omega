@@ -23,7 +23,7 @@ export const IMAGES = {
   sermon3: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   sermon4: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   leaders: {
-    founder: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/founder_6.jpeg',
+    founder: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/founder_01.jpeg',
     chairperson: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/chairman.jpeg',
     secretary_general: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/GS.jpeg',
     treasurer: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBL8YE7kH6q7eKz0Pu-NMXSY5PiaJ6WdyK1vlJOcuprRge88OHul06X9LTq9CCX94QeQ6NQe04ObBuq0-qiM0fDjnZ-R2Sve5luPJ_Ri9aYcCQ7auTdnW19QsYLPW6pR_HJ8-fn712_t6ee6BxLK34cBhN28WaN4ZPWhhWf30HWxwf63Ezi0ZqpvsnBgUMJRu_poKjjuiCLQZHsKMs8WzvhUBsQh_p65dQkbxXRu3oy5aSr2fPFHwS0'
