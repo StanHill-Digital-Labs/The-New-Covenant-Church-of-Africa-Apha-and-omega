@@ -274,7 +274,7 @@ export const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose }) =
           </div>
           <h3 className="font-headline-lg text-[26px] text-[#475749]">Support Our Mission</h3>
           <p className="font-body-md text-sm text-[#434843] mt-1">
-            Your tithes and offerings help spread God's Word, provide community shelter, food relief, and medical aid in Mumias.
+            Your tithes and offerings help spread God's Word, provide community shelter, food relief, and medical aid.
           </p>
         </div>
 

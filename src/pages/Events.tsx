@@ -57,7 +57,7 @@ export const Events: React.FC<EventsProps> = ({ onOpenPrayerModal }) => {
                     : 'text-[#434843] hover:text-[#1c1c18] hover:bg-[#e5e2dc]/60'
                 }`}
               >
-                {tab === 'All' ? 'All Events' : `${tab} Events`}
+                {tab === 'All' ? 'All' : `${tab}`}
               </button>
             ))}
           </div>

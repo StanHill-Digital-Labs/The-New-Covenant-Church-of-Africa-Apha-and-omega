@@ -16,16 +16,16 @@ export const FOUNDING_YEAR = 2018;
 
 export const IMAGES = {
   heroBg: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtYE98OENi4N2IDppn5V-NBeE-ZO-qD7a4Liv1bwgJVwyOoa9jpr8k08y0XVCu1AnyGXNrcKP2tXVfs_2y3anYgBtRo6xdTCtVQRBASylfIvYwtpSl1y2xnf-lFg9TKpIAcfq5B2fg6kJPDjQXelgPzN4rzkrsW1VJ4HNThWvmTj30oK5QQ03nbDW2A-vkAJqit9CZeFLZI5ccg0gd7qjaWx7bqAOZB8B-RdW36zlO8pGKH3Ajr5PE',
-  communityMumias: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/group_2.jpeg',
-  founder_about: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/founder_8.jpeg',
+  communityMumias: 'https://res.cloudinary.com/k01jme78/image/upload/v1790236994/group_1_ycceuc.jpg',
+  founder_about: 'https://res.cloudinary.com/k01jme78/image/upload/v1790241964/founder_8_pk3dwi.jpg',
   sermon1: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   sermon2: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   sermon3: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   sermon4: 'https://i3.ytimg.com/vi/iwcjcSEmw60/hqdefault.jpg',
   leaders: {
-    founder: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/founder_01.jpeg',
-    chairperson: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/chairman.jpeg',
-    secretary_general: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/GS.jpeg',
+    founder: 'https://res.cloudinary.com/k01jme78/image/upload/v1790241963/founder_01_dtprex.jpg',
+    chairperson: 'https://res.cloudinary.com/k01jme78/image/upload/v1790241962/chairman_wde5bi.jpg',
+    secretary_general: 'https://res.cloudinary.com/k01jme78/image/upload/v1790241964/GS_btjabc.jpg',
     treasurer: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBL8YE7kH6q7eKz0Pu-NMXSY5PiaJ6WdyK1vlJOcuprRge88OHul06X9LTq9CCX94QeQ6NQe04ObBuq0-qiM0fDjnZ-R2Sve5luPJ_Ri9aYcCQ7auTdnW19QsYLPW6pR_HJ8-fn712_t6ee6BxLK34cBhN28WaN4ZPWhhWf30HWxwf63Ezi0ZqpvsnBgUMJRu_poKjjuiCLQZHsKMs8WzvhUBsQh_p65dQkbxXRu3oy5aSr2fPFHwS0'
   }
 };
@@ -327,9 +327,9 @@ export const EVENTS: ChurchEvent[] = [
     category: 'Outreach',
     description: 'Join us for an uplifting session of prophetic praise, powerful intercession, and divine revelatory teaching with Prophet Raphael Zedekiah.',
     isPast: true,
-    image: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/mirere.png',
+    image: 'https://res.cloudinary.com/k01jme78/image/upload/v1790235226/mirere_drh0ik.png',
     photos: [],
-    videos: ['https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda-107_H2bZyhmr.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_100.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_101.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_102.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_103.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_104.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_105.mp4', 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/ushuhuda_106.mp4']
+    videos: ['https://res.cloudinary.com/k01jme78/video/upload/v1790235349/ushuhuda-107_H2bZyhmr_nrakug.mp4', 'https://res.cloudinary.com/k01jme78/video/upload/v1790235968/ushuhuda_100_axw0ze.mp4', 'https://res.cloudinary.com/k01jme78/video/upload/v1790235976/ushuhuda_101_yt2jpq.mp4', 'https://res.cloudinary.com/k01jme78/video/upload/v1790236119/ushuhuda_102_fpspsi.mp4', 'https://res.cloudinary.com/k01jme78/video/upload/v1790235995/ushuhuda_103_ktlq8j.mp4', 'https://res.cloudinary.com/k01jme78/video/upload/v1790236012/ushuhuda_104_apkh5x.mp4', 'https://res.cloudinary.com/k01jme78/video/upload/v1790236058/ushuhuda_105_no2u0p.mp4', 'https://res.cloudinary.com/k01jme78/video/upload/v1790236090/ushuhuda_106_fsloyr.mp4']
   },
   ];
   {/**
@@ -375,7 +375,7 @@ export const IMPACT_STORIES = [
     id: 'story-1',
     title: 'A Home Built in Faith',
     punchline: 'From a leaking shelter to a home of his own.',
-    image: 'https://iwmbezzrfytebpoxjkjx.supabase.co/storage/v1/object/public/new%20covenant%20asstes/charity_1.jpeg',
+    image: 'https://res.cloudinary.com/k01jme78/image/upload/v1790236993/charity_1_hrfonr.jpg',
     story:
       "For years, [Name] and his family lived in a one-room structure that could barely keep out the rain. When our church learned of his situation, our congregation came together, through offerings, labor, and prayer, to build him a proper home. Today, that same ground holds walls that stand firm and a roof that keeps his family dry, a small but lasting sign of God's provision through His people.",
     quote: "I never thought I would own a home like this. God used His church to answer a prayer I had almost stopped praying.",
