@@ -4,6 +4,7 @@ import { CHURCH_INFO } from '../data/churchData';
 import Logo from '../assets/logo.svg';
 import TopText from '../assets/top-text.svg';
 import CathedralIcon from '../assets/cathedral-icon.svg';
+import NewLogo from '../assets/newLogo.png';
 import BottomText from '../assets/bottom-text.svg';
 
 interface HeaderProps {
@@ -52,13 +53,13 @@ export const Header: React.FC<HeaderProps> = ({
           title={CHURCH_INFO.fullName}
         >
           {/*<img
-	    src={Logo}
+	    src={newLogo}
 	    alt="The New Covenant Church of Africa - Alpha and Omega"
 	    className="h- w-18 sm:h- sm:w-32 object-contain "
 	  />*/}
-	  <div className="relative top-[-14px] md:top-[-38px] flex flex-col items-center">
+	  <div className="relative top-[] md:top-[] flex flex-col items-center border border-red-400">
 		 {/* <img src={TopText} alt="The New Covenant Church of Africa" className="absolute top-8 w-64 sm:w-72" />*/}
-		  <img src={CathedralIcon} alt="" className="w-24 md:w-28 my-1" />
+		  <img src={NewLogo} alt="" className="w-24 md:w-28 my-1" />
 		  {/*<img src={BottomText} alt="Alpha and Omega" className="absolute bottom-3 w-40 sm:w-48" />*/}
 	  </div>
         </Link>
