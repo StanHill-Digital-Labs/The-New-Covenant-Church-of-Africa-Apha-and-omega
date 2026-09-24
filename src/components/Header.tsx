@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CHURCH_INFO } from '../data/churchData';
-import Logo from '../assets/logo.svg';
-import TopText from '../assets/top-text.svg';
-import CathedralIcon from '../assets/cathedral-icon.svg';
 import NewLogo from '../assets/newLogo.png';
-import BottomText from '../assets/bottom-text.svg';
 
 interface HeaderProps {
   onOpenSupportModal: () => void;
@@ -24,11 +20,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -49,19 +41,16 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Brand */}
         <Link
           to="/"
-          className="relative flex items-center size-28 gap-3 shrink-0 md:top-6"
+          className="relative flex items-center shrink-0 w-24 sm:w-28 h-full"
           title={CHURCH_INFO.fullName}
         >
-          {/*<img
-	    src={newLogo}
-	    alt="The New Covenant Church of Africa - Alpha and Omega"
-	    className="h- w-18 sm:h- sm:w-32 object-contain "
-	  />*/}
-	  <div className="relative top-[] md:top-[] flex flex-col items-center border border-red-400">
-		 {/* <img src={TopText} alt="The New Covenant Church of Africa" className="absolute top-8 w-64 sm:w-72" />*/}
-		  <img src={NewLogo} alt="" className="w-24 md:w-28 my-1" />
-		  {/*<img src={BottomText} alt="Alpha and Omega" className="absolute bottom-3 w-40 sm:w-48" />*/}
-	  </div>
+          <img
+            src={NewLogo}
+            alt="The New Covenant Church of Africa - Alpha and Omega"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 w-auto object-contain transition-all duration-300 z-10 ${
+      isScrolled ? 'h-20' : 'h-28'
+            }`}
+          />
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -142,14 +131,8 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </div>
 
-        {/* Mobile Menu Button & Quick Support */}
+        {/* Mobile Menu Button */}
         <div className="flex items-center gap-2 md:hidden">
-          {/*<button
-            onClick={onOpenSupportModal}
-            className="bg-[#475749] text-white px-3 py-1.5 rounded-full text-xs font-semibold cursor-pointer whitespace-nowrap"
-          >
-            Support
-          </button> */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-[#475749] p-2 rounded-md hover:bg-[#e5e2dc]/50 transition-colors cursor-pointer"
@@ -188,7 +171,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               About Us
             </Link>
-            
+
             <Link
               to="/events"
               onClick={() => setMobileMenuOpen(false)}
@@ -200,7 +183,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               Events
             </Link>
-            
+
             <Link
               to="/sermons"
               onClick={() => setMobileMenuOpen(false)}
@@ -223,7 +206,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 Support Our Mission
               </button>
-              
+
               <div className="flex justify-around pt-2 text-[#434843]">
                 <button
                   onClick={() => {
